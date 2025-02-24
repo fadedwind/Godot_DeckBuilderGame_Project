@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://cholc5dhbn8o0"]
+
+[ext_resource type="Theme" uid="uid://b2mrso0snjhyu" path="res://main_theme.tres" id="1_1wv2h"]
+[ext_resource type="Script" path="res://card_ui/card_ui.gd" id="2_wimum"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_slber"]
+size = Vector2(178, 218.935)
+
+[node name="CardUI" type="Control"]
+custom_minimum_size = Vector2(180, 220)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -2208.0
+offset_bottom = -1468.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.974593)
+theme = ExtResource("1_1wv2h")
+script = ExtResource("2_wimum")
+
+[node name="Color" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.718085, 0.803752, 1, 1)
+
+[node name="State" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 22
+text = "state
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DropPointDetector" type="Area2D" parent="."]
+visibility_layer = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DropPointDetector"]
+position = Vector2(90, 110.111)
+shape = SubResource("RectangleShape2D_slber")
