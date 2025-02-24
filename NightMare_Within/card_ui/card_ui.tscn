@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cholc5dhbn8o0"]
+[gd_scene load_steps=5 format=3 uid="uid://cholc5dhbn8o0"]
 
 [ext_resource type="Theme" uid="uid://b2mrso0snjhyu" path="res://main_theme.tres" id="1_1wv2h"]
 [ext_resource type="Script" path="res://card_ui/card_ui.gd" id="2_wimum"]
+[ext_resource type="Script" path="res://card_ui/card_state_machine.gd" id="3_6jtel"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_slber"]
 size = Vector2(178, 218.935)
@@ -49,3 +50,14 @@ monitorable = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DropPointDetector"]
 position = Vector2(90, 110.111)
 shape = SubResource("RectangleShape2D_slber")
+
+[node name="CardStateMachine" type="Node" parent="."]
+script = ExtResource("3_6jtel")
+
+[node name="CardBaseState" type="Node" parent="CardStateMachine"]
+
+[node name="CardClickedState" type="Node" parent="CardStateMachine"]
+
+[node name="CardDraggingState" type="Node" parent="CardStateMachine"]
+
+[node name="CardReleasedState" type="Node" parent="CardStateMachine"]
