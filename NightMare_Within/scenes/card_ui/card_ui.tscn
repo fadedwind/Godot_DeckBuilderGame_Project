@@ -1,4 +1,13 @@
-[gd_scene format=3 uid="uid://cholc5dhbn8o0"]
+[gd_scene load_steps=7 format=3 uid="uid://cholc5dhbn8o0"]
+
+[ext_resource type="Script" path="res://scenes/card_ui/Card_states/card_state_machine.gd" id="1_tkna5"]
+[ext_resource type="Script" path="res://scenes/card_ui/Card_states/card_base_state.gd" id="2_bci08"]
+[ext_resource type="Script" path="res://scenes/card_ui/Card_states/card_clicked_state.gd" id="3_8rnb8"]
+[ext_resource type="Script" path="res://scenes/card_ui/Card_states/card_dragging_state.gd" id="4_o5w20"]
+[ext_resource type="Script" path="res://scenes/card_ui/Card_states/card_released_state.gd" id="5_3j2we"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ng1ra"]
+size = Vector2(160, 192.258)
 
 [node name="CardUI" type="Control"]
 custom_minimum_size = Vector2(160, 192)
@@ -32,3 +41,26 @@ text = "state
 "
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="DropPointDetector" type="Area2D" parent="."]
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DropPointDetector"]
+position = Vector2(80, 96.7722)
+shape = SubResource("RectangleShape2D_ng1ra")
+
+[node name="CardStateMachine" type="Node" parent="."]
+script = ExtResource("1_tkna5")
+
+[node name="CardBaseState" type="Node" parent="CardStateMachine"]
+script = ExtResource("2_bci08")
+
+[node name="CardClickedState" type="Node" parent="CardStateMachine"]
+script = ExtResource("3_8rnb8")
+
+[node name="CardDraggingState" type="Node" parent="CardStateMachine"]
+script = ExtResource("4_o5w20")
+
+[node name="CardRekeasedState" type="Node" parent="CardStateMachine"]
+script = ExtResource("5_3j2we")
