@@ -1,6 +1,6 @@
 extends CardState
 
-func enetr() -> void:
+func enter() -> void:
 	var ui_layer := get_tree().get_first_node_in_group("ui_layer")
 	if ui_layer:
 		card_ui.repareant(ui_layer)
