@@ -58,9 +58,12 @@ script = ExtResource("2_bci08")
 
 [node name="CardClickedState" type="Node" parent="CardStateMachine"]
 script = ExtResource("3_8rnb8")
+state = 1
 
 [node name="CardDraggingState" type="Node" parent="CardStateMachine"]
 script = ExtResource("4_o5w20")
+state = 2
 
-[node name="CardRekeasedState" type="Node" parent="CardStateMachine"]
+[node name="CardReleasedState" type="Node" parent="CardStateMachine"]
 script = ExtResource("5_3j2we")
+state = 4
