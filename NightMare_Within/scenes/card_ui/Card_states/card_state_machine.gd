@@ -9,7 +9,7 @@ var states := {}
 
 func init(card: CardUI) -> void:
 	for child: CardState in get_children():
-		if child:
+		if child is CardState:
 			states[child.state] = child
 			child.transition_requested.connect(_on_transition_requested)
 			child.card_ui = card

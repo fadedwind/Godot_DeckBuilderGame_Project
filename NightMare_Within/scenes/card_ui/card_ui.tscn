@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://cholc5dhbn8o0"]
+[gd_scene load_steps=8 format=3 uid="uid://cholc5dhbn8o0"]
 
+[ext_resource type="Script" path="res://scenes/card_ui/card_ui.gd" id="1_hpo1g"]
 [ext_resource type="Script" path="res://scenes/card_ui/Card_states/card_state_machine.gd" id="1_tkna5"]
 [ext_resource type="Script" path="res://scenes/card_ui/Card_states/card_base_state.gd" id="2_bci08"]
 [ext_resource type="Script" path="res://scenes/card_ui/Card_states/card_clicked_state.gd" id="3_8rnb8"]
@@ -20,6 +21,7 @@ offset_bottom = -1496.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1, 0.974593)
+script = ExtResource("1_hpo1g")
 
 [node name="Color" type="ColorRect" parent="."]
 layout_mode = 1
@@ -28,6 +30,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0.718085, 0.803752, 1, 1)
 
 [node name="State" type="Label" parent="."]
@@ -50,8 +53,9 @@ monitorable = false
 position = Vector2(80, 96.7722)
 shape = SubResource("RectangleShape2D_ng1ra")
 
-[node name="CardStateMachine" type="Node" parent="."]
+[node name="CardStateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("1_tkna5")
+initial_state = NodePath("CardBaseState")
 
 [node name="CardBaseState" type="Node" parent="CardStateMachine"]
 script = ExtResource("2_bci08")
@@ -67,3 +71,9 @@ state = 2
 [node name="CardReleasedState" type="Node" parent="CardStateMachine"]
 script = ExtResource("5_3j2we")
 state = 4
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="area_entered" from="DropPointDetector" to="." method="_on_drop_point_detector_area_entered"]
+[connection signal="area_exited" from="DropPointDetector" to="." method="_on_drop_point_detector_area_exited"]
