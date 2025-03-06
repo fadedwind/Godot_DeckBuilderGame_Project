@@ -3,6 +3,8 @@ extends Control
 
 signal reparent_requested(which_card_ui: CardUI)
 
+@export var card: Card
+
 @onready var color: ColorRect = $Color
 @onready var state: Label = $State
 @onready var drop_point_detector: Area2D = $DropPointDetector

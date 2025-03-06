@@ -8,18 +8,14 @@
 [ext_resource type="Script" path="res://scenes/card_ui/Card_states/card_released_state.gd" id="5_3j2we"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ng1ra"]
-size = Vector2(160, 192.258)
+size = Vector2(200, 248.692)
 
 [node name="CardUI" type="Control"]
-custom_minimum_size = Vector2(160, 192)
+custom_minimum_size = Vector2(200, 250)
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -2228.0
-offset_bottom = -1496.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+offset_right = 180.0
+offset_bottom = 220.0
 scale = Vector2(1, 0.974593)
 script = ExtResource("1_hpo1g")
 
@@ -50,7 +46,7 @@ collision_mask = 2
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DropPointDetector"]
-position = Vector2(80, 96.7722)
+position = Vector2(100, 124.989)
 shape = SubResource("RectangleShape2D_ng1ra")
 
 [node name="CardStateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
