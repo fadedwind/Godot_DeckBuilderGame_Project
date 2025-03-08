@@ -11,12 +11,21 @@ signal reparent_requested(which_card_ui: CardUI)
 @onready var card_state_machine: CardStateMachine = $CardStateMachine as CardStateMachine
 @onready var targets: Array[Node] = []
 
+var parent: Control
+var tween: Tween
+
 func _ready() -> void:
 	card_state_machine.init(self)
 
 func _input(event:InputEvent) -> void:
 	card_state_machine.on_input(event)
 
+
+func animate_to_position(new_position: Vector2, duration: float) -> void:
+	tween = create_tween().set_trans(Tween.TRANS_CIRC).set_ease(Tween.EASE_OUT)
+	tween.tween_property(self, "global_position", new_position, duration)
+	
+	
 func _on_gui_input(event:InputEvent) -> void:
 	card_state_machine.on_gui_input(event)
 	

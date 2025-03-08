@@ -6,4 +6,4 @@
 script = ExtResource("1_nd487")
 id = ""
 type = 0
-target = 0
+target = 1
