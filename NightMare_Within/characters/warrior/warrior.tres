@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CharacterStats" load_steps=3 format=3 uid="uid://dpe7e8pmly3vh"]
+
+[ext_resource type="Script" path="res://custom_resources/character_stats.gd" id="1_0jqec"]
+[ext_resource type="Resource" uid="uid://yn3j47jxghep" path="res://characters/warrior/warrior_starting_deck.tres" id="2_056w3"]
+
+[resource]
+script = ExtResource("1_0jqec")
+starting_deck = ExtResource("2_056w3")
+cards_per_turn = 4
+max_mana = 3
+max_health = 70

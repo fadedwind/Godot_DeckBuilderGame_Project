@@ -23,6 +23,7 @@ func _get_points() -> Array:
 	var points := []
 	var start := current_card.global_position
 	start.x += (current_card.size.x / 2)
+	start.y = 1600
 	var target := get_local_mouse_position()
 	var distance := (target - start)
 	
