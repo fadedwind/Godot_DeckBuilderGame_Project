@@ -1,7 +1,9 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://b2mrso0snjhyu"]
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://b2mrso0snjhyu"]
 
 [ext_resource type="FontFile" uid="uid://bxwokrik8ko0v" path="res://art/华文楷体.ttf" id="1_6uvre"]
+[ext_resource type="StyleBox" uid="uid://b56gd2viq10js" path="res://scenes/card_ui/card_base_stylebox.tres" id="1_ff3nc"]
 
 [resource]
 default_font = ExtResource("1_6uvre")
 default_font_size = 22
+Panel/styles/panel = ExtResource("1_ff3nc")
