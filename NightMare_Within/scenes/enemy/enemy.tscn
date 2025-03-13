@@ -18,6 +18,7 @@ texture = ExtResource("1_vtaxb")
 [node name="Arrow" type="Sprite2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(15, 103.235)
 shape = SubResource("RectangleShape2D_whkqg")
 
