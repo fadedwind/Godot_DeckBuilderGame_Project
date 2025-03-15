@@ -88,7 +88,6 @@ initial_state = NodePath("CardBaseState")
 
 [node name="CardBaseState" type="Node" parent="CardStateMachine"]
 script = ExtResource("2_bci08")
-state = null
 
 [node name="CardClickedState" type="Node" parent="CardStateMachine"]
 script = ExtResource("3_8rnb8")

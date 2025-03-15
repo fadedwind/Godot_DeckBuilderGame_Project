@@ -1,10 +1,21 @@
-[gd_resource type="Theme" load_steps=3 format=3 uid="uid://b2mrso0snjhyu"]
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://b2mrso0snjhyu"]
 
 [ext_resource type="FontFile" uid="uid://bxwokrik8ko0v" path="res://art/华文楷体.ttf" id="1_6uvre"]
 [ext_resource type="StyleBox" uid="uid://b56gd2viq10js" path="res://scenes/card_ui/card_base_stylebox.tres" id="1_ff3nc"]
+[ext_resource type="StyleBox" uid="uid://brbpdwumc5ovg" path="res://scenes/card_ui/card_hover_stylebox.tres" id="1_txmsy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vtfnf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rd7px"]
 
 [resource]
 default_font = ExtResource("1_6uvre")
 default_font_size = 22
+Button/font_sizes/font_size = 25
+Button/styles/disabled = SubResource("StyleBoxEmpty_vtfnf")
+Button/styles/focus = SubResource("StyleBoxEmpty_rd7px")
+Button/styles/hover = ExtResource("1_txmsy")
+Button/styles/normal = ExtResource("1_ff3nc")
+Button/styles/pressed = null
 Panel/styles/panel = ExtResource("1_ff3nc")
 PanelContainer/styles/panel = ExtResource("1_ff3nc")
