@@ -8,6 +8,9 @@ const HAND_DISCARD_INTERVAL := 0.25
 
 var character: CharacterStats
 
+func _ready() -> void:
+	Events.card_played.connect(_on_card_played)
+
 func start_battle(char_stats: CharacterStats) -> void:
 	character = char_stats
 	character.draw_pile = character.deck.duplicate(true)
@@ -21,7 +24,7 @@ func start_turn() -> void:
 	draw_cards(character.cards_per_turn)
 	
 func end_turn() -> void:
-	hand.disable.hand()
+	hand.disable_hand()
 	discard_cards()
 
 func draw_card() -> void:
@@ -55,8 +58,13 @@ func reshuffle_deck_from_discard() -> void:
 	if not character.draw_pile.empty():
 		return
 	
+	while not character.discard.empty():
+		character.draw_pile.add_card(character.discard.draw_card())
 	
+	character.draw_pile.shuffle()
 	
+func _on_card_played(card: Card) -> void:
+	character.discard.add_card(card)
 	
 	
 	

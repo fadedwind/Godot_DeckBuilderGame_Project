@@ -8,7 +8,7 @@ extends CanvasLayer
 @onready var end_turn_button: Button = $EndTurnButton
 
 func _ready() -> void:
-	Events.player_head_drawn.connect(_on_player_hand_drawn)
+	Events.player_hand_drawn.connect(_on_player_hand_drawn)
 	end_turn_button.pressed.connect(_on_end_turn_button_pressed)
 
 

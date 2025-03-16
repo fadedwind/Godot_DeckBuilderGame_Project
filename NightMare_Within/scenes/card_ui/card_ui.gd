@@ -8,7 +8,7 @@ const DRAG_STYLEBOX := preload("res://scenes/card_ui/card_dragging_stylebox.tres
 const HOVER_STYLEBOX := preload("res://scenes/card_ui/card_hover_stylebox.tres")
 
 @export var card: Card : set = _set_card
-@export var char_stats: CharacterStats
+@export var char_stats: CharacterStats : set = _set_char_stats
 
 @onready var panel: Panel = $Panel
 @onready var cost: Label = $cost

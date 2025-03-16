@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="Stats" load_steps=3 format=3 uid="uid://rg3srok2ha2a"]
-
-[ext_resource type="Texture2D" uid="uid://d1rd1bpleiowq" path="res://art/enemy/slime.png" id="1_34rm3"]
-[ext_resource type="Script" path="res://custom_resources/stats.gd" id="1_hrgr2"]
-
-[resource]
-script = ExtResource("1_hrgr2")
-max_health = 15
-art = ExtResource("1_34rm3")

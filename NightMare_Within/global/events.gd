@@ -12,4 +12,4 @@ signal tooltip_hide_requested
 #player-related evnets
 signal player_hand_drawn
 signal player_hand_discarded
-signal player_hand_ended
+signal player_turn_ended

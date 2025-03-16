@@ -19,11 +19,11 @@ func add_card(card: Card) -> void:
 	new_card_ui.char_stats = char_stats
 	
 func discard_card(card: CardUI) -> void:
-	card.queue_tree()
+	card.queue_free()
 	
 func disable_hand() -> void:
 	for card in get_children():
-		card.diabaled = true
+		card.disabled = true
 	
 func _on_card_played(_card: Card) -> void:
 	cards_played_this_turn += 1
