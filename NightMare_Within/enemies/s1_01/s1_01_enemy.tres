@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="EnemyStats" load_steps=3 format=3 uid="uid://dfps2fl7pxdp2"]
+[gd_resource type="Resource" script_class="EnemyStats" load_steps=4 format=3 uid="uid://dfps2fl7pxdp2"]
 
+[ext_resource type="PackedScene" uid="uid://bbw51k76ud1jq" path="res://enemies/s1_01/s1_01_ai.tscn" id="1_hiw47"]
 [ext_resource type="Texture2D" uid="uid://d1rd1bpleiowq" path="res://art/enemy/slime.png" id="1_saekl"]
 [ext_resource type="Script" path="res://custom_resources/enemy_stats.gd" id="1_ym0vn"]
 
 [resource]
 script = ExtResource("1_ym0vn")
+ai = ExtResource("1_hiw47")
 max_health = 15
 art = ExtResource("1_saekl")
