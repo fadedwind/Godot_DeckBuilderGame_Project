@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cm1mvr4ni6x58"]
+[gd_scene load_steps=7 format=3 uid="uid://cm1mvr4ni6x58"]
 
 [ext_resource type="Texture2D" uid="uid://d1rd1bpleiowq" path="res://art/enemy/slime.png" id="1_vtaxb"]
 [ext_resource type="Script" path="res://scenes/enemy/enemy.gd" id="1_xsmfc"]
 [ext_resource type="PackedScene" uid="uid://bt0xalhdg45xk" path="res://scenes/ui/stats_ui.tscn" id="2_f8364"]
 [ext_resource type="PackedScene" uid="uid://b1bvh78hr5w48" path="res://scenes/ui/intent_ui.tscn" id="4_4d67b"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_37q1c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_whkqg"]
 size = Vector2(353.5, 303.253)
@@ -14,6 +16,7 @@ collision_layer = 4
 script = ExtResource("1_xsmfc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_37q1c")
 texture = ExtResource("1_vtaxb")
 
 [node name="Arrow" type="Sprite2D" parent="."]

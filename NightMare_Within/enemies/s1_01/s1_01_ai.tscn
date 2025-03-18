@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bbw51k76ud1jq"]
+[gd_scene load_steps=12 format=3 uid="uid://bbw51k76ud1jq"]
 
 [ext_resource type="Script" path="res://scenes/enemy/enemy_action_picker.gd" id="1_uslqr"]
 [ext_resource type="Script" path="res://enemies/s1_01/s1_01_attack_action.gd" id="2_m5agd"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://enemies/s1_01/s1_01_block_action.gd" id="3_ruf60"]
 [ext_resource type="Script" path="res://custom_resources/intent.gd" id="3_uou3m"]
 [ext_resource type="Script" path="res://enemies/s1_01/s1_01_mega_block_action.gd" id="4_82b7f"]
+[ext_resource type="AudioStream" uid="uid://k8m4o3hlwm7l" path="res://art/enemy_block.ogg" id="5_keuso"]
 [ext_resource type="Texture2D" uid="uid://oe7v35ii8vrs" path="res://art/tile_0102.png" id="6_cj8tw"]
 
 [sub_resource type="Resource" id="Resource_aq288"]
@@ -29,15 +30,18 @@ script = ExtResource("1_uslqr")
 [node name="AttackAction" type="Node" parent="."]
 script = ExtResource("2_m5agd")
 intent = SubResource("Resource_aq288")
+sound = ExtResource("5_keuso")
 type = 1
 chance_weight = 6.5
 
 [node name="BlockAction" type="Node" parent="."]
 script = ExtResource("3_ruf60")
 intent = SubResource("Resource_vx0av")
+sound = ExtResource("5_keuso")
 type = 1
 chance_weight = 3.5
 
 [node name="MegaBlockAction" type="Node" parent="."]
 script = ExtResource("4_82b7f")
 intent = SubResource("Resource_lfwu7")
+sound = ExtResource("5_keuso")

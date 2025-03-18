@@ -1,10 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://1gbooxgr2w4d"]
+[gd_scene load_steps=19 format=3 uid="uid://1gbooxgr2w4d"]
 
 [ext_resource type="Script" path="res://scenes/battle/battle.gd" id="1_8afes"]
 [ext_resource type="Texture2D" uid="uid://cl8qhixvg5bfc" path="res://art/backgroundexample.png" id="1_aliql"]
 [ext_resource type="Script" path="res://scenes/ui/hand.gd" id="2_cvqur"]
 [ext_resource type="PackedScene" uid="uid://cm1mvr4ni6x58" path="res://scenes/enemy/enemy.tscn" id="2_qdovh"]
 [ext_resource type="PackedScene" uid="uid://dtvk1refiqnta" path="res://scenes/card_target_selector/card_target_selector.tscn" id="3_1ytil"]
+[ext_resource type="AudioStream" uid="uid://bn6437fc2vc" path="res://art/ost/Scene1.mp3" id="3_is32j"]
 [ext_resource type="Resource" uid="uid://dpe7e8pmly3vh" path="res://characters/warrior/warrior.tres" id="4_edhhu"]
 [ext_resource type="Texture2D" uid="uid://ddpy8s84slta1" path="res://art/scene1-v1.png" id="4_noxjk"]
 [ext_resource type="Script" path="res://scenes/enemy/enemy_handler.gd" id="5_egp1s"]
@@ -15,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://7u80482gv0bo" path="res://scenes/ui/mana_ui.tscn" id="11_jekfh"]
 [ext_resource type="PackedScene" uid="uid://dyfhx1d2qybr8" path="res://scenes/ui/tooltip.tscn" id="12_lbkt6"]
 [ext_resource type="Theme" uid="uid://b2mrso0snjhyu" path="res://main_theme.tres" id="13_5d3hj"]
+[ext_resource type="Script" path="res://scenes/ui/red_flash.gd" id="16_xjf4c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1hloe"]
 size = Vector2(2400, 1251.09)
@@ -23,6 +25,7 @@ size = Vector2(2400, 1251.09)
 scale = Vector2(1, 1.00741)
 script = ExtResource("1_8afes")
 char_stats = ExtResource("4_edhhu")
+music = ExtResource("3_is32j")
 metadata/_edit_lock_ = true
 
 [node name="Background1" type="Sprite2D" parent="."]
@@ -103,3 +106,20 @@ grow_horizontal = 0
 grow_vertical = 0
 theme = ExtResource("13_5d3hj")
 text = "结束回合"
+
+[node name="RedFlash" type="CanvasLayer" parent="."]
+layer = 2
+script = ExtResource("16_xjf4c")
+
+[node name="ColorRect" type="ColorRect" parent="RedFlash"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.792157, 0.0823529, 0.0941176, 0)
+
+[node name="Timer" type="Timer" parent="RedFlash"]
+wait_time = 0.1
+one_shot = true

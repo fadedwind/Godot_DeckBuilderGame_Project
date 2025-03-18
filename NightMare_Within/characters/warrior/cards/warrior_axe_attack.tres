@@ -1,7 +1,8 @@
-[gd_resource type="Resource" load_steps=3 format=3 uid="uid://bf6dd86tmbdbl"]
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://bf6dd86tmbdbl"]
 
 [ext_resource type="Texture2D" uid="uid://ck1t4hdip6xrl" path="res://art/tile_0119.png" id="1_ocxs5"]
 [ext_resource type="Script" path="res://characters/warrior/cards/warrior_axe_attack.gd" id="1_oxcyb"]
+[ext_resource type="AudioStream" uid="uid://d3foovj7p0a6e" path="res://art/audio/STS_SFX_EnemyAtk_Knife_v1.ogg" id="3_jrgf6"]
 
 [resource]
 script = ExtResource("1_oxcyb")
@@ -11,3 +12,4 @@ target = 1
 cost = 1
 icon = ExtResource("1_ocxs5")
 tooltip_text = "[center]造成[color=\"ff0000\"]6[/color]点伤害.[/center]"
+sound = ExtResource("3_jrgf6")

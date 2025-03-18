@@ -1,7 +1,8 @@
-[gd_resource type="Resource" load_steps=3 format=3 uid="uid://cdtenykymwm4c"]
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://cdtenykymwm4c"]
 
 [ext_resource type="Texture2D" uid="uid://oe7v35ii8vrs" path="res://art/tile_0102.png" id="1_8nntr"]
 [ext_resource type="Script" path="res://characters/warrior/cards/warrior_block.gd" id="2_ec7iw"]
+[ext_resource type="AudioStream" uid="uid://df64e7qat73gs" path="res://art/block.ogg" id="3_t0tug"]
 
 [resource]
 script = ExtResource("2_ec7iw")
@@ -11,3 +12,4 @@ target = 0
 cost = 1
 icon = ExtResource("1_8nntr")
 tooltip_text = "[center]获得[color=\"0044ff\"]5[/color]点格挡.[/center]"
+sound = ExtResource("3_t0tug")
