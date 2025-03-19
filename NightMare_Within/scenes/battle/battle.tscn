@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://1gbooxgr2w4d"]
+[gd_scene load_steps=21 format=3 uid="uid://1gbooxgr2w4d"]
 
 [ext_resource type="Script" path="res://scenes/battle/battle.gd" id="1_8afes"]
 [ext_resource type="Texture2D" uid="uid://cl8qhixvg5bfc" path="res://art/backgroundexample.png" id="1_aliql"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" path="res://scenes/ui/battle_ui.gd" id="7_vp8qw"]
 [ext_resource type="Script" path="res://scenes/player/player_handler.gd" id="8_75au7"]
 [ext_resource type="PackedScene" uid="uid://ccjl5pwx06f2m" path="res://scenes/player/player.tscn" id="8_x0pb2"]
+[ext_resource type="Resource" uid="uid://d2f2fyrqjaa4y" path="res://enemies/s1_02/s1_02_enemy.tres" id="9_2g4hw"]
 [ext_resource type="PackedScene" uid="uid://7u80482gv0bo" path="res://scenes/ui/mana_ui.tscn" id="11_jekfh"]
 [ext_resource type="PackedScene" uid="uid://dyfhx1d2qybr8" path="res://scenes/ui/tooltip.tscn" id="12_lbkt6"]
 [ext_resource type="Theme" uid="uid://b2mrso0snjhyu" path="res://main_theme.tres" id="13_5d3hj"]
@@ -38,15 +39,22 @@ metadata/_edit_lock_ = true
 [node name="Background2" type="Sprite2D" parent="."]
 position = Vector2(2181, 833.821)
 texture = ExtResource("4_noxjk")
-metadata/_edit_lock_ = true
 
 [node name="EnemyHandler" type="Node2D" parent="."]
 position = Vector2(2181, 833.821)
 script = ExtResource("5_egp1s")
 
-[node name="Enemy" parent="EnemyHandler" instance=ExtResource("2_qdovh")]
+[node name="Enemy2" parent="EnemyHandler" instance=ExtResource("2_qdovh")]
+position = Vector2(-769, 217.389)
+stats = ExtResource("9_2g4hw")
+
+[node name="Enemy1" parent="EnemyHandler" instance=ExtResource("2_qdovh")]
 position = Vector2(-387, 285.879)
 stats = ExtResource("7_lte54")
+
+[node name="Enemy2_2" parent="EnemyHandler" instance=ExtResource("2_qdovh")]
+position = Vector2(-4, 226.323)
+stats = ExtResource("9_2g4hw")
 
 [node name="CardDropArea" type="Area2D" parent="."]
 collision_layer = 2
@@ -113,6 +121,7 @@ layer = 2
 script = ExtResource("16_xjf4c")
 
 [node name="ColorRect" type="ColorRect" parent="RedFlash"]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

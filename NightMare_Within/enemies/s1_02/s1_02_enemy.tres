@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EnemyStats" load_steps=4 format=3 uid="uid://d2f2fyrqjaa4y"]
+
+[ext_resource type="PackedScene" uid="uid://4mijxki6dby8" path="res://enemies/s1_02/s1_02_ai.tscn" id="1_nl0vl"]
+[ext_resource type="Script" path="res://custom_resources/enemy_stats.gd" id="1_tbgs3"]
+[ext_resource type="Texture2D" uid="uid://rq2hkfky7j8n" path="res://art/enemy/anglerFlower.png" id="1_ulbgx"]
+
+[resource]
+script = ExtResource("1_tbgs3")
+ai = ExtResource("1_nl0vl")
+max_health = 8
+art = ExtResource("1_ulbgx")
