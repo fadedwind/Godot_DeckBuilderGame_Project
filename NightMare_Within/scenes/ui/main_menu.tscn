@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c3u78gy5scye5"]
 
-[ext_resource type="Texture2D" uid="uid://bp7yjprj7l4ut" path="res://art/R.jpg" id="1_n6o4c"]
+[ext_resource type="Texture2D" uid="uid://bp7yjprj7l4ut" path="res://art/background/R.jpg" id="1_n6o4c"]
 
 [sub_resource type="Gradient" id="Gradient_oapow"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)

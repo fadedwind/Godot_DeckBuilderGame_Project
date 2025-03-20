@@ -1,8 +1,9 @@
 [gd_resource type="Theme" load_steps=6 format=3 uid="uid://b2mrso0snjhyu"]
 
-[ext_resource type="FontFile" uid="uid://bxwokrik8ko0v" path="res://art/华文楷体.ttf" id="1_6uvre"]
+[ext_resource type="FontFile" uid="uid://bxwokrik8ko0v" path="res://art/fonts/华文楷体.ttf" id="1_6uvre"]
 [ext_resource type="StyleBox" uid="uid://b56gd2viq10js" path="res://scenes/card_ui/card_base_stylebox.tres" id="1_ff3nc"]
 [ext_resource type="StyleBox" uid="uid://brbpdwumc5ovg" path="res://scenes/card_ui/card_hover_stylebox.tres" id="1_txmsy"]
+
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vtfnf"]
 

@@ -2,7 +2,8 @@
 
 [ext_resource type="Theme" uid="uid://b2mrso0snjhyu" path="res://main_theme.tres" id="1_4abmw"]
 [ext_resource type="Script" path="res://scenes/ui/tooltip.gd" id="2_dnoxr"]
-[ext_resource type="Texture2D" uid="uid://oe7v35ii8vrs" path="res://art/tile_0102.png" id="2_eyym6"]
+[ext_resource type="Texture2D" uid="uid://oe7v35ii8vrs" path="res://art/ui/tile_0102.png" id="2_eyym6"]
+
 
 [node name="Tooltip" type="PanelContainer"]
 anchors_preset = 5

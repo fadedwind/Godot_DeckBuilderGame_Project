@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=3 uid="uid://b1bvh78hr5w48"]
 
-[ext_resource type="Texture2D" uid="uid://bq4im540nk025" path="res://art/tile_0106.png" id="1_46xau"]
+[ext_resource type="Texture2D" uid="uid://bq4im540nk025" path="res://art/ui/tile_0106.png" id="1_46xau"]
 [ext_resource type="Script" path="res://scenes/ui/intent_ui.gd" id="1_u5a6s"]
+
 
 [node name="IntentUI" type="HBoxContainer"]
 anchors_preset = 5
