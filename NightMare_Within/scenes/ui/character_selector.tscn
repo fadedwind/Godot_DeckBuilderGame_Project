@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://cv2cdx2gry6s8"]
+
+[ext_resource type="LabelSettings" uid="uid://cw3dwexqhewxp" path="res://scenes/ui/GameTitleLabel.tres" id="1_7giiw"]
+[ext_resource type="FontFile" uid="uid://bxwokrik8ko0v" path="res://art/fonts/华文楷体.ttf" id="2_hlpjm"]
+
+[sub_resource type="Gradient" id="Gradient_oapow"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_umfp5"]
+gradient = SubResource("Gradient_oapow")
+width = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_kkqk1"]
+font = ExtResource("2_hlpjm")
+font_size = 100
+font_color = Color(0.413599, 0.649687, 0.943202, 1)
+
+[node name="CharacterSelector" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_umfp5")
+metadata/_edit_lock_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "弦月追魂"
+label_settings = ExtResource("1_7giiw")
+horizontal_alignment = 1
+
+[node name="Title2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "身形敏捷，擅长射箭。"
+label_settings = SubResource("LabelSettings_kkqk1")
+horizontal_alignment = 1

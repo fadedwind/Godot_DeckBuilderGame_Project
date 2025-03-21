@@ -5,11 +5,11 @@
 [ext_resource type="FontFile" uid="uid://bxwokrik8ko0v" path="res://art/fonts/华文楷体.ttf" id="2_4sg81"]
 [ext_resource type="LabelSettings" uid="uid://cw3dwexqhewxp" path="res://scenes/ui/GameTitleLabel.tres" id="2_vvbrc"]
 
-[sub_resource type="Gradient" id="Gradient_wgbht"]
+[sub_resource type="Gradient" id="Gradient_oapow"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_sltys"]
-gradient = SubResource("Gradient_wgbht")
+gradient = SubResource("Gradient_oapow")
 width = 50
 
 [sub_resource type="LabelSettings" id="LabelSettings_r5gym"]

@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://d2pg2i8yqkkp7"]
+
+[ext_resource type="FontFile" uid="uid://bxwokrik8ko0v" path="res://art/fonts/华文楷体.ttf" id="1_fimkm"]
+
+[resource]
+font = ExtResource("1_fimkm")
+font_size = 20
+font_color = Color(0.0936297, 9.62615e-08, 0.574543, 1)
+shadow_size = 0

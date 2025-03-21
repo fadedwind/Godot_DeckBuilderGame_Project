@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cholc5dhbn8o0"]
+[gd_scene load_steps=13 format=3 uid="uid://cholc5dhbn8o0"]
 
 [ext_resource type="Script" path="res://scenes/card_ui/card_ui.gd" id="1_hpo1g"]
 [ext_resource type="Script" path="res://scenes/card_ui/Card_states/card_state_machine.gd" id="1_tkna5"]
@@ -8,9 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://bfvi02kojsa00" path="res://art/ui/tile_0103.png" id="3_5plhu"]
 [ext_resource type="Script" path="res://scenes/card_ui/Card_states/card_clicked_state.gd" id="3_8rnb8"]
 [ext_resource type="Script" path="res://scenes/card_ui/Card_states/card_dragging_state.gd" id="4_o5w20"]
+[ext_resource type="LabelSettings" uid="uid://d2pg2i8yqkkp7" path="res://scenes/ui/text_label_settings.tres" id="4_owynr"]
 [ext_resource type="Script" path="res://scenes/card_ui/Card_states/card_released_state.gd" id="5_3j2we"]
 [ext_resource type="Script" path="res://scenes/card_ui/Card_states/card_aiming_state.gd" id="7_5mbg0"]
-
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ng1ra"]
 size = Vector2(217, 337.96)
@@ -34,9 +34,22 @@ grow_vertical = 2
 mouse_filter = 2
 theme_override_styles/panel = ExtResource("2_xw3eg")
 
-[node name="Cardimg1" type="Sprite2D" parent="."]
+[node name="Cardbg" type="Sprite2D" parent="."]
 position = Vector2(126, 195.979)
 texture = ExtResource("2_3dxrn")
+
+[node name="CardNameText" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -35.5
+offset_right = 35.5
+offset_bottom = 27.0
+grow_horizontal = 2
+text = "打击"
+label_settings = ExtResource("4_owynr")
+horizontal_alignment = 1
 
 [node name="cost" type="Label" parent="."]
 layout_mode = 1
@@ -48,6 +61,7 @@ offset_right = -226.0
 offset_bottom = 21.9739
 grow_horizontal = 2
 text = "2"
+label_settings = ExtResource("4_owynr")
 horizontal_alignment = 1
 
 [node name="Icon" type="TextureRect" parent="."]
@@ -60,19 +74,27 @@ offset_bottom = 19.0
 grow_horizontal = 0
 texture = ExtResource("3_5plhu")
 
-[node name="CardText" type="TextEdit" parent="."]
+[node name="CardDescriptionText" type="TextEdit" parent="."]
 visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 41.0
-offset_top = 196.0
-offset_right = -42.0
-offset_bottom = -65.0
+offset_left = 54.0
+offset_top = 229.84
+offset_right = -58.0
+offset_bottom = -82.1605
 grow_horizontal = 2
 grow_vertical = 2
-text = "deal 6  damage"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CardDescriptionText"]
+visible = false
+layout_mode = 0
+offset_right = 144.0
+offset_bottom = 83.0
+bbcode_enabled = true
+text = "[center]造成6点伤害.[/center]"
+tab_size = 3
 
 [node name="DropPointDetector" type="Area2D" parent="."]
 collision_mask = 2

@@ -1,0 +1,10 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cw3dwexqhewxp"]
+
+[ext_resource type="FontFile" uid="uid://bxwokrik8ko0v" path="res://art/fonts/华文楷体.ttf" id="1_5tm8y"]
+
+[resource]
+font = ExtResource("1_5tm8y")
+font_size = 150
+font_color = Color(0.60591, 0.579907, 1, 1)
+shadow_size = 2
+shadow_color = Color(0.162915, 2.74345e-05, 0.62418, 0)

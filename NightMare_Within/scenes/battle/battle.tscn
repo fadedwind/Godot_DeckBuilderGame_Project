@@ -139,7 +139,3 @@ layer = 2
 
 [node name="BattleOverPanel" parent="BattleOverLayer" instance=ExtResource("18_x7tiv")]
 visible = false
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 0.0
-offset_bottom = 0.0
