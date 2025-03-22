@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CharacterStats" load_steps=4 format=3 uid="uid://cmil0nndee0ie"]
+
+[ext_resource type="Script" path="res://custom_resources/character_stats.gd" id="1_31ocq"]
+[ext_resource type="Texture2D" uid="uid://xwrx1jax8e5s" path="res://characters/Ranger/Ranger.png" id="1_euw1e"]
+[ext_resource type="Resource" uid="uid://yn3j47jxghep" path="res://characters/Warrior/warrior_starting_deck.tres" id="3_5nnxl"]
+
+[resource]
+script = ExtResource("1_31ocq")
+character_name = "Ranger"
+description = "身形敏捷，擅长射箭"
+portrait = ExtResource("1_euw1e")
+starting_deck = ExtResource("3_5nnxl")
+cards_per_turn = 6
+max_mana = 3
+max_health = 65
+art = ExtResource("1_euw1e")

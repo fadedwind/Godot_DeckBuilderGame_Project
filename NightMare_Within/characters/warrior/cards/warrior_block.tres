@@ -1,7 +1,7 @@
 [gd_resource type="Resource" load_steps=4 format=3 uid="uid://cdtenykymwm4c"]
 
 [ext_resource type="Texture2D" uid="uid://oe7v35ii8vrs" path="res://art/ui/tile_0102.png" id="1_8nntr"]
-[ext_resource type="Script" path="res://characters/warrior/cards/warrior_block.gd" id="2_ec7iw"]
+[ext_resource type="Script" path="res://characters/Warrior/cards/warrior_block.gd" id="2_ec7iw"]
 [ext_resource type="AudioStream" uid="uid://df64e7qat73gs" path="res://art/audio/block.ogg" id="3_t0tug"]
 
 

@@ -30,7 +30,7 @@ position = Vector2(1194, 845)
 scale = Vector2(1.4925, 1.92027)
 texture = ExtResource("1_n6o4c")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
