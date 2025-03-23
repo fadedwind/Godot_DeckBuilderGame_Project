@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://cetw7apmahr80"]
+
+[ext_resource type="Script" path="res://run.gd" id="1_e1p5v"]
+[ext_resource type="PackedScene" uid="uid://c3yu334t3xc8b" path="res://scenes/map/map.tscn" id="2_57ypi"]
+
+[node name="Run" type="Node"]
+script = ExtResource("1_e1p5v")
+
+[node name="Map" parent="." instance=ExtResource("2_57ypi")]
+
+[node name="CurrentView" type="Node" parent="."]
+
+[node name="DebugButtons" type="VBoxContainer" parent="."]
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 222.0
+grow_vertical = 2
+
+[node name="MapButton" type="Button" parent="DebugButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Map
+"
+
+[node name="BattleButton" type="Button" parent="DebugButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Battle
+"
+
+[node name="ShopButton" type="Button" parent="DebugButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Shop
+"
+
+[node name="TreasureButton" type="Button" parent="DebugButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Treasure
+"
+
+[node name="RewardsButton" type="Button" parent="DebugButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Rewards"
+
+[node name="RestsiteButton" type="Button" parent="DebugButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Restsite
+"

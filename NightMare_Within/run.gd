@@ -1,0 +1,55 @@
+class_name Run
+extends Node
+
+const BATTLE_SCENE := preload("res://scenes/battle/battle.tscn")
+const BATTLE_REWARD_SCENE := preload("res://scenes/battle_rewards/battle_rewards.tscn")
+const RESTSITE_SCENE := preload("res://scenes/RestSite/restsite.tscn")
+const MAP_SCENE := preload("res://scenes/map/map.tscn")
+const SHOP_SCENE := preload("res://scenes/shop/shop.tscn")
+const TREASURE_SCENE := preload("res://scenes/treasure/treasure.tscn")
+
+@onready var current_view: Node = $CurrentView
+@onready var battle_button: Button = %BattleButton
+@onready var restsite_button: Button = %RestsiteButton
+@onready var map_button: Button = %MapButton
+@onready var rewards_button: Button = %RewardsButton
+@onready var shop_button: Button = %ShopButton
+@onready var treasure_button: Button = %TreasureButton
+
+var character: CharacterStats
+
+func _ready() -> void:
+	if not character:
+		var warrior := load("res://characters/Warrior/warrior.tres")
+		character = warrior.create_instance()
+		_start_run()
+		
+func _start_run() -> void:
+	_setup_event_connections()
+	print("load the map")
+
+func _change_view(scene: PackedScene) -> void:
+	if current_view.get_child_count() > 0:
+		current_view.get_child(0).queue_free()
+	
+	get_tree().paused = false
+	var new_view := scene.instantiate()
+	current_view.add_child(new_view)
+			
+func _setup_event_connections() -> void:
+	Events.battle_won.connect(_change_view.bind(BATTLE_SCENE))
+	Events.battle_reward_exited.connect(_change_view.bind(MAP_SCENE))
+	Events.restsite_exited.connect(_change_view.bind(MAP_SCENE))
+	Events.map_exited.connect(_on_map_exited)
+	Events.shop_exited.connect(_change_view.bind(MAP_SCENE))
+	Events.treasure_room_exited.connect(_change_view.bind(MAP_SCENE))
+	
+	battle_button.pressed.connect(_change_view.bind(BATTLE_SCENE))
+	restsite_button.pressed.connect(_change_view.bind(RESTSITE_SCENE))
+	map_button.pressed.connect(_change_view.bind(MAP_SCENE))
+	rewards_button.pressed.connect(_change_view.bind(BATTLE_REWARD_SCENE))
+	shop_button.pressed.connect(_change_view.bind(SHOP_SCENE))
+	treasure_button.pressed.connect(_change_view.bind(TREASURE_SCENE))
+	
+func _on_map_exited() -> void:
+	print("TODO: from the MAP, change view based on room type")

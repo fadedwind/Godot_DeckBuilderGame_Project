@@ -20,7 +20,7 @@ func set_current_character(new_character: CharacterStats) -> void:
 	character_potrait.texture = current_character.portrait
 	
 func _on_start_button_pressed() -> void:
-	print("started")
+	print("123")
 
 func _on_ranger_button_pressed() -> void:
 	current_character = RANGER_STATS

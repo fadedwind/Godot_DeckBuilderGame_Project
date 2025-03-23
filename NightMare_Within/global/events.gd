@@ -33,5 +33,8 @@ signal shop_exited
 #Battle Reward-related events
 signal battle_reward_exited
 
+#restsite Reward-related events
+signal restsite_exited
+
 #Treasure Room-related events
 signal treasure_room_exited
