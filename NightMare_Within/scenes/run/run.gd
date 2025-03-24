@@ -8,6 +8,8 @@ const MAP_SCENE := preload("res://scenes/map/map.tscn")
 const SHOP_SCENE := preload("res://scenes/shop/shop.tscn")
 const TREASURE_SCENE := preload("res://scenes/treasure/treasure.tscn")
 
+@export var run_startup: RunStartup
+
 @onready var current_view: Node = $CurrentView
 @onready var battle_button: Button = %BattleButton
 @onready var restsite_button: Button = %RestsiteButton
@@ -19,10 +21,15 @@ const TREASURE_SCENE := preload("res://scenes/treasure/treasure.tscn")
 var character: CharacterStats
 
 func _ready() -> void:
-	if not character:
-		var warrior := load("res://characters/Warrior/warrior.tres")
-		character = warrior.create_instance()
-		_start_run()
+	if not run_startup:
+		return
+		
+	match run_startup.type:
+		RunStartup.Type.NEW_RUN:
+			character = run_startup.picked_character.create_instance()
+			_start_run()
+		RunStartup.Type.CONTINUED_RUN:
+			print("Todo:load previous run")
 		
 func _start_run() -> void:
 	_setup_event_connections()
@@ -37,7 +44,7 @@ func _change_view(scene: PackedScene) -> void:
 	current_view.add_child(new_view)
 			
 func _setup_event_connections() -> void:
-	Events.battle_won.connect(_change_view.bind(BATTLE_SCENE))
+	Events.battle_won.connect(_change_view.bind(BATTLE_REWARD_SCENE))
 	Events.battle_reward_exited.connect(_change_view.bind(MAP_SCENE))
 	Events.restsite_exited.connect(_change_view.bind(MAP_SCENE))
 	Events.map_exited.connect(_on_map_exited)

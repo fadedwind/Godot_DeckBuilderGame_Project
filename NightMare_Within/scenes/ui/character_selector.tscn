@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://cv2cdx2gry6s8"]
+[gd_scene load_steps=14 format=3 uid="uid://cv2cdx2gry6s8"]
 
 [ext_resource type="LabelSettings" uid="uid://cw3dwexqhewxp" path="res://scenes/ui/GameTitleLabel.tres" id="1_7giiw"]
 [ext_resource type="Script" path="res://scenes/ui/character_selector.gd" id="1_o55nj"]
+[ext_resource type="Resource" uid="uid://dqogllb3qlh0n" path="res://scenes/run/run_startup.tres" id="2_65p6h"]
 [ext_resource type="FontFile" uid="uid://bxwokrik8ko0v" path="res://art/fonts/华文楷体.ttf" id="2_hlpjm"]
 [ext_resource type="Texture2D" uid="uid://xwrx1jax8e5s" path="res://characters/Ranger/Ranger.png" id="3_bho0w"]
 [ext_resource type="Texture2D" uid="uid://ct3gl0r1dt7k1" path="res://art/character/1.png" id="4_n0c4n"]
@@ -36,6 +37,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_o55nj")
+run_startup = ExtResource("2_65p6h")
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
