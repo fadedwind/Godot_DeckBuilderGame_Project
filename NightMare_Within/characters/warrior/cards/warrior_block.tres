@@ -4,13 +4,14 @@
 [ext_resource type="Script" path="res://characters/Warrior/cards/warrior_block.gd" id="2_ec7iw"]
 [ext_resource type="AudioStream" uid="uid://df64e7qat73gs" path="res://art/audio/block.ogg" id="3_t0tug"]
 
-
 [resource]
 script = ExtResource("2_ec7iw")
-id = "warrior_block"
+id = 0
+Cardname = "防御"
 type = 1
 target = 0
 cost = 1
+description = "获得5点格挡。"
 icon = ExtResource("1_8nntr")
 tooltip_text = "[center]获得[color=\"0044ff\"]5[/color]点格挡.[/center]"
 sound = ExtResource("3_t0tug")

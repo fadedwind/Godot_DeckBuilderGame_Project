@@ -1,0 +1,149 @@
+[gd_scene load_steps=5 format=3 uid="uid://bpvk4onpmeb0a"]
+
+[ext_resource type="FontFile" uid="uid://bxwokrik8ko0v" path="res://art/fonts/华文楷体.ttf" id="1_3bq36"]
+[ext_resource type="PackedScene" uid="uid://n3irqow6qvtf" path="res://scenes/ui/card_menu_ui.tscn" id="2_eybvd"]
+[ext_resource type="Theme" uid="uid://b2mrso0snjhyu" path="res://main_theme.tres" id="3_65way"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_34hop"]
+font = ExtResource("1_3bq36")
+font_size = 80
+font_color = Color(0.649373, 0.807258, 0.994986, 1)
+
+[node name="CardPileView" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backgeound" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(8.0258e-05, 0.0122032, 0.139979, 0.705882)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 80
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 80
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "弃牌堆"
+label_settings = SubResource("LabelSettings_34hop")
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 2
+
+[node name="Cards" type="GridContainer" parent="MarginContainer/VBoxContainer/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/h_separation = 130
+theme_override_constants/v_separation = 30
+columns = 6
+
+[node name="CardMenuUI" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("2_eybvd")]
+layout_mode = 2
+
+[node name="CardMenuUI2" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("2_eybvd")]
+layout_mode = 2
+
+[node name="CardMenuUI3" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("2_eybvd")]
+layout_mode = 2
+
+[node name="CardMenuUI4" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("2_eybvd")]
+layout_mode = 2
+
+[node name="CardMenuUI6" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("2_eybvd")]
+layout_mode = 2
+
+[node name="CardMenuUI5" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("2_eybvd")]
+layout_mode = 2
+
+[node name="CardMenuUI7" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("2_eybvd")]
+layout_mode = 2
+
+[node name="CardMenuUI8" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("2_eybvd")]
+layout_mode = 2
+
+[node name="CardMenuUI9" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("2_eybvd")]
+layout_mode = 2
+
+[node name="CardMenuUI10" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("2_eybvd")]
+layout_mode = 2
+
+[node name="CardMenuUI11" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("2_eybvd")]
+layout_mode = 2
+
+[node name="CardMenuUI12" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("2_eybvd")]
+layout_mode = 2
+
+[node name="CardMenuUI13" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("2_eybvd")]
+layout_mode = 2
+
+[node name="CardMenuUI14" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("2_eybvd")]
+layout_mode = 2
+
+[node name="CardMenuUI15" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("2_eybvd")]
+layout_mode = 2
+
+[node name="CardMenuUI16" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("2_eybvd")]
+layout_mode = 2
+
+[node name="CardMenuUI17" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("2_eybvd")]
+layout_mode = 2
+
+[node name="CardMenuUI18" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("2_eybvd")]
+layout_mode = 2
+
+[node name="CardMenuUI19" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("2_eybvd")]
+layout_mode = 2
+
+[node name="CardMenuUI20" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("2_eybvd")]
+layout_mode = 2
+
+[node name="CardMenuUI21" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("2_eybvd")]
+layout_mode = 2
+
+[node name="CardMenuUI22" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("2_eybvd")]
+layout_mode = 2
+
+[node name="CardMenuUI23" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("2_eybvd")]
+layout_mode = 2
+
+[node name="CardMenuUI24" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("2_eybvd")]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -226.0
+offset_top = 40.0
+offset_right = -46.0
+offset_bottom = 120.0
+grow_horizontal = 0
+theme = ExtResource("3_65way")
+text = "返回"

@@ -9,7 +9,6 @@
 [ext_resource type="AudioStream" uid="uid://k8m4o3hlwm7l" path="res://art/audio/enemy_block.ogg" id="5_keuso"]
 [ext_resource type="Texture2D" uid="uid://oe7v35ii8vrs" path="res://art/ui/tile_0102.png" id="6_cj8tw"]
 
-
 [sub_resource type="Resource" id="Resource_aq288"]
 script = ExtResource("3_uou3m")
 number = "7"

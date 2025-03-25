@@ -6,10 +6,12 @@
 
 [resource]
 script = ExtResource("2_5q88v")
-id = "warrior_slash"
+id = 0
+Cardname = "劈斩"
 type = 0
 target = 2
 cost = 2
+description = "对所有敌人造成10点伤害。"
 icon = ExtResource("1_ppy32")
 tooltip_text = "[center]对所有敌人造成[color=\"ff0000\"]10[/color]点伤害.[/center]"
 sound = ExtResource("3_ffgp1")

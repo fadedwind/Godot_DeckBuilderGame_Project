@@ -1,11 +1,11 @@
 [gd_scene load_steps=21 format=3 uid="uid://1gbooxgr2w4d"]
 
 [ext_resource type="Script" path="res://scenes/battle/battle.gd" id="1_8afes"]
-[ext_resource type="Texture2D" uid="uid://cl8qhixvg5bfc" path="res://art/background/backgroundexample.png" id="1_aliql"]
 [ext_resource type="Script" path="res://scenes/ui/hand.gd" id="2_cvqur"]
 [ext_resource type="PackedScene" uid="uid://cm1mvr4ni6x58" path="res://scenes/enemy/enemy.tscn" id="2_qdovh"]
 [ext_resource type="PackedScene" uid="uid://dtvk1refiqnta" path="res://scenes/card_target_selector/card_target_selector.tscn" id="3_1ytil"]
 [ext_resource type="AudioStream" uid="uid://bn6437fc2vc" path="res://art/ost/Scene1.mp3" id="3_is32j"]
+[ext_resource type="Texture2D" uid="uid://b887723gd87kf" path="res://art/background/scene1-v2.png" id="4_bv8bt"]
 [ext_resource type="Resource" uid="uid://dpe7e8pmly3vh" path="res://characters/Warrior/warrior.tres" id="4_edhhu"]
 [ext_resource type="Texture2D" uid="uid://ddpy8s84slta1" path="res://art/background/scene1-v1.png" id="4_noxjk"]
 [ext_resource type="Script" path="res://scenes/enemy/enemy_handler.gd" id="5_egp1s"]
@@ -32,7 +32,7 @@ metadata/_edit_lock_ = true
 
 [node name="Background1" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("1_aliql")
+texture = ExtResource("4_bv8bt")
 centered = false
 metadata/_edit_lock_ = true
 

@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://ddycuypccqjrv"]
 
-[ext_resource type="Script" path="res://scenes/Treasure/treasure.gd" id="1_jab86"]
+[ext_resource type="Script" path="res://scenes/treasure/treasure.gd" id="1_jab86"]
+
 
 [node name="treasure" type="Control"]
 layout_mode = 3

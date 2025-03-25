@@ -38,7 +38,7 @@ theme_override_styles/panel = ExtResource("2_xw3eg")
 position = Vector2(126, 195.979)
 texture = ExtResource("2_3dxrn")
 
-[node name="CardNameText" type="Label" parent="."]
+[node name="Cardname" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -51,7 +51,7 @@ text = "打击"
 label_settings = ExtResource("4_owynr")
 horizontal_alignment = 1
 
-[node name="cost" type="Label" parent="."]
+[node name="Cost" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -69,32 +69,29 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -18.0
-offset_bottom = 19.0
+offset_left = -210.0
+offset_top = 30.7821
+offset_right = -48.0
+offset_bottom = 204.782
 grow_horizontal = 0
 texture = ExtResource("3_5plhu")
 
-[node name="CardDescriptionText" type="TextEdit" parent="."]
-visible = false
+[node name="Description" type="Label" parent="."]
+custom_minimum_size = Vector2(120, 70)
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 54.0
-offset_top = 229.84
-offset_right = -58.0
-offset_bottom = -82.1605
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.5
+offset_top = 31.8135
+offset_right = 59.5
+offset_bottom = 101.813
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="RichTextLabel" type="RichTextLabel" parent="CardDescriptionText"]
-visible = false
-layout_mode = 0
-offset_right = 144.0
-offset_bottom = 83.0
-bbcode_enabled = true
-text = "[center]造成6点伤害.[/center]"
-tab_size = 3
+text = "造成6点伤害。"
+label_settings = ExtResource("4_owynr")
 
 [node name="DropPointDetector" type="Area2D" parent="."]
 collision_mask = 2

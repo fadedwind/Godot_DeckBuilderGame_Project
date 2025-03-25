@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://balgceprxpvkj" path="res://art/character/2.png" id="5_bc8ic"]
 [ext_resource type="Texture2D" uid="uid://bqtpejl5dj5yb" path="res://art/character/3.png" id="6_gy0ks"]
 
+
 [sub_resource type="Gradient" id="Gradient_oapow"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
 

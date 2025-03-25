@@ -11,8 +11,11 @@ const HOVER_STYLEBOX := preload("res://scenes/card_ui/card_hover_stylebox.tres")
 @export var char_stats: CharacterStats : set = _set_char_stats
 
 @onready var panel: Panel = $Panel
-@onready var cost: Label = $cost
+@onready var Cardname: Label = $Cardname
+@onready var cost: Label = $Cost
+@onready var description: Label = $Description
 @onready var icon: TextureRect = $Icon
+
 @onready var drop_point_detector: Area2D = $DropPointDetector
 @onready var card_state_machine: CardStateMachine = $CardStateMachine as CardStateMachine
 @onready var targets: Array[Node] = []
@@ -60,6 +63,8 @@ func _set_card(value: Card) -> void:
 
 	card = value
 	cost.text = str(card.cost)
+	Cardname.text = card.Cardname
+	description.text = card.description
 	icon.texture = card.icon
 	
 func _set_playable(value: bool) -> void:
