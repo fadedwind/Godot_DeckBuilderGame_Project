@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://custom_resources/character_stats.gd" id="1_0jqec"]
 [ext_resource type="Texture2D" uid="uid://cqclxcc4l7d06" path="res://art/character/testCharacter.png" id="1_kg534"]
-[ext_resource type="Texture2D" uid="uid://d4etsrl6n32ow" path="res://art/cards/CardDesignSmall.png" id="2_0gbm2"]
+[ext_resource type="Texture2D" uid="uid://do8a6ce22ag0j" path="res://art/cards/CardDesignSmall.png" id="2_0gbm2"]
 [ext_resource type="Resource" uid="uid://yn3j47jxghep" path="res://characters/Warrior/warrior_starting_deck.tres" id="2_056w3"]
 
 [resource]

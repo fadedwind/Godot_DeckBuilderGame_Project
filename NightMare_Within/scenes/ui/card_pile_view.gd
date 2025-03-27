@@ -13,12 +13,13 @@ const CARD_MENU_UI_SCENE := preload("res://scenes/ui/card_menu_ui.tscn")
 
 func _ready() -> void:
 	back_button.pressed.connect(hide)
-	
 	for card: Node in cards.get_children():
 		card.queue_free()
-	
 	card_tooltip_popup.hide_tooltip()
-
+	await get_tree().create_timer(2.0).timeout
+	card_pile = preload("res://characters/Warrior/warrior_starting_deck.tres")
+	show_current_view("Deck")
+	
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
 		if card_tooltip_popup.visible:
