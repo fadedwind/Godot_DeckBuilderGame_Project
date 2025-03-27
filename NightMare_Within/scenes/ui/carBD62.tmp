@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scenes/ui/card_pile_view.gd" id="1_81fra"]
 [ext_resource type="PackedScene" uid="uid://n3irqow6qvtf" path="res://scenes/ui/card_menu_ui.tscn" id="2_eybvd"]
 [ext_resource type="Theme" uid="uid://b2mrso0snjhyu" path="res://main_theme.tres" id="3_65way"]
-[ext_resource type="PackedScene" uid="uid://b6e1yihjxu2d2" path="res://scenes/ui/card_tooltip_popup.tscn" id="5_mgnpo"]
+[ext_resource type="PackedScene" uid="uid://b6e1yihjxu2d2" path="res://scenes/ui/card_tooltip_proup.tscn" id="5_mgnpo"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_34hop"]
 font = ExtResource("1_3bq36")
@@ -152,4 +152,6 @@ theme = ExtResource("3_65way")
 text = "返回"
 
 [node name="CardTooltipPopup" parent="." instance=ExtResource("5_mgnpo")]
+unique_name_in_owner = true
+visible = false
 layout_mode = 1

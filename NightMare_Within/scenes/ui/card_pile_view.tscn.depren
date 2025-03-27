@@ -152,4 +152,6 @@ theme = ExtResource("3_65way")
 text = "返回"
 
 [node name="CardTooltipPopup" parent="." instance=ExtResource("5_mgnpo")]
+unique_name_in_owner = true
+visible = false
 layout_mode = 1
