@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="CharacterStats" load_steps=5 format=3 uid="uid://25jakqm6xa22"]
 
-[ext_resource type="Texture2D" uid="uid://d4etsrl6n32ow" path="res://art/cards/CardDesignSmall.png" id="1_fv3lw"]
+[ext_resource type="Texture2D" uid="uid://do8a6ce22ag0j" path="res://art/cards/CardDesignSmall.png" id="1_fv3lw"]
 [ext_resource type="Script" path="res://custom_resources/character_stats.gd" id="1_xwqmg"]
 [ext_resource type="Texture2D" uid="uid://bub5dit8hsb0n" path="res://art/enemy/testCharacter.png" id="2_1o303"]
 [ext_resource type="Resource" uid="uid://yn3j47jxghep" path="res://characters/Warrior/warrior_starting_deck.tres" id="3_n6psg"]
