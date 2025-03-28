@@ -6,6 +6,7 @@
 [ext_resource type="Resource" uid="uid://cdtenykymwm4c" path="res://characters/Warrior/cards/warrior_block.tres" id="3_i8858"]
 [ext_resource type="Resource" uid="uid://bafwh55iag38v" path="res://characters/Warrior/cards/warrior_slash.tres" id="3_nlkgm"]
 
+
 [resource]
 script = ExtResource("2_4yui4")
 cards = Array[ExtResource("1_n38ke")]([ExtResource("2_gcqbw"), ExtResource("2_gcqbw"), ExtResource("2_gcqbw"), ExtResource("2_gcqbw"), ExtResource("2_gcqbw"), ExtResource("3_nlkgm"), ExtResource("3_i8858"), ExtResource("3_i8858"), ExtResource("3_i8858"), ExtResource("3_i8858")])

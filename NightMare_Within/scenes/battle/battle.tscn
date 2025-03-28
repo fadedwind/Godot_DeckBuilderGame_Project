@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dtvk1refiqnta" path="res://scenes/card_target_selector/card_target_selector.tscn" id="3_1ytil"]
 [ext_resource type="AudioStream" uid="uid://bn6437fc2vc" path="res://art/ost/Scene1.mp3" id="3_is32j"]
 [ext_resource type="Texture2D" uid="uid://b887723gd87kf" path="res://art/background/scene1-v2.png" id="4_bv8bt"]
-[ext_resource type="Resource" uid="uid://dpe7e8pmly3vh" path="res://characters/warrior/warrior.tres" id="4_edhhu"]
+[ext_resource type="Resource" uid="uid://dpe7e8pmly3vh" path="res://characters/Warrior/warrior.tres" id="4_edhhu"]
 [ext_resource type="Texture2D" uid="uid://ddpy8s84slta1" path="res://art/background/scene1-v1.png" id="4_noxjk"]
 [ext_resource type="Script" path="res://scenes/enemy/enemy_handler.gd" id="5_egp1s"]
 [ext_resource type="Resource" uid="uid://dfps2fl7pxdp2" path="res://enemies/s1_01/s1_01_enemy.tres" id="7_lte54"]
@@ -204,13 +204,13 @@ layer = 2
 [node name="BattleOverPanel" parent="BattleOverLayer" instance=ExtResource("18_x7tiv")]
 visible = false
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-layer = 3
+[node name="CardPileView" type="CanvasLayer" parent="."]
+layer = 4
 
-[node name="DrawPileView" parent="CanvasLayer" instance=ExtResource("21_311y1")]
+[node name="DrawPileView" parent="CardPileView" instance=ExtResource("21_311y1")]
 unique_name_in_owner = true
 visible = false
 
-[node name="DiscardPileView" parent="CanvasLayer" instance=ExtResource("21_311y1")]
+[node name="DiscardPileView" parent="CardPileView" instance=ExtResource("21_311y1")]
 unique_name_in_owner = true
 visible = false

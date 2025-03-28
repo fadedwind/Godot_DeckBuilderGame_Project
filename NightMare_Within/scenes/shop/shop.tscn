@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/shop/shop.gd" id="1_xdntp"]
 
+
 [node name="Shop" type="Control"]
 layout_mode = 3
 anchors_preset = 15

@@ -24,7 +24,6 @@ func _on_visuals_mouse_exited() -> void:
 func _on_visuals_gui_input(event: InputEvent) -> void:
 	panel.set("theme_override_styles/panel", BASE_STYLEBOX)
 
-
 func _set_card(value: Card) -> void:
 	if not is_node_ready():
 		await ready

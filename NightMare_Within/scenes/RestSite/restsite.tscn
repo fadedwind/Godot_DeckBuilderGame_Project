@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://cfw7gyeo38d1d"]
 
-[ext_resource type="Script" path="res://scenes/RestSite/restsite.gd" id="1_dnaq6"]
+[ext_resource type="Script" path="res://scenes/restsite/restsite.gd" id="1_dnaq6"]
+
 
 [node name="restsite" type="Control"]
 layout_mode = 3
