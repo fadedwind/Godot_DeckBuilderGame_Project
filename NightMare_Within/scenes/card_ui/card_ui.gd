@@ -33,10 +33,8 @@ func _ready() -> void:
 	Events.card_aim_ended.connect(_on_card_drag_or_aim_ended)
 	card_state_machine.init(self)
 	
-
 func _input(event:InputEvent) -> void:
 	card_state_machine.on_input(event)
-
 
 func animate_to_position(new_position: Vector2, duration: float) -> void:
 	tween = create_tween().set_trans(Tween.TRANS_CIRC).set_ease(Tween.EASE_OUT)

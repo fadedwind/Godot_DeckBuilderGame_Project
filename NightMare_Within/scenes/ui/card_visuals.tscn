@@ -1,0 +1,101 @@
+[gd_scene load_steps=8 format=3 uid="uid://bh760rtfg5icm"]
+
+[ext_resource type="Script" path="res://scenes/ui/card_visuals.gd" id="1_6thwy"]
+[ext_resource type="StyleBox" uid="uid://lmbk0b34o4ac" path="res://scenes/card_ui/card_dragging_stylebox.tres" id="1_id0tm"]
+[ext_resource type="Texture2D" uid="uid://qp4y08nikdju" path="res://art/cards/CardDesign2.png" id="2_4ijvf"]
+[ext_resource type="Script" path="res://characters/Warrior/cards/warrior_slash.gd" id="2_55pt2"]
+[ext_resource type="LabelSettings" uid="uid://d2pg2i8yqkkp7" path="res://scenes/ui/text_label_settings.tres" id="3_vxvmf"]
+[ext_resource type="Texture2D" uid="uid://bfvi02kojsa00" path="res://art/ui/tile_0103.png" id="4_teyov"]
+[ext_resource type="Texture2D" uid="uid://cqqirgawswiy" path="res://art/cards/rarity1.png" id="5_7kymr"]
+
+[node name="CardVisuals" type="Control"]
+custom_minimum_size = Vector2(253, 394)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_6thwy")
+card = ExtResource("2_55pt2")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("1_id0tm")
+
+[node name="Cardbg" type="Sprite2D" parent="."]
+position = Vector2(126, 195.979)
+texture = ExtResource("2_4ijvf")
+
+[node name="Cardname" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -35.5
+offset_right = 35.5
+offset_bottom = 27.0
+grow_horizontal = 2
+text = "打击"
+label_settings = ExtResource("3_vxvmf")
+horizontal_alignment = 1
+
+[node name="Cost" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -5.0
+offset_top = -1.02607
+offset_right = -226.0
+offset_bottom = 21.9739
+grow_horizontal = 2
+text = "2"
+label_settings = ExtResource("3_vxvmf")
+horizontal_alignment = 1
+
+[node name="Icon" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -210.0
+offset_top = 30.7821
+offset_right = -48.0
+offset_bottom = 204.782
+grow_horizontal = 0
+texture = ExtResource("4_teyov")
+
+[node name="Description" type="Label" parent="."]
+custom_minimum_size = Vector2(120, 70)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.5
+offset_top = 21.0
+offset_right = 65.5
+offset_bottom = 91.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "造成6点伤害。"
+label_settings = ExtResource("3_vxvmf")
+
+[node name="Rarity" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -53.0
+offset_top = -42.0
+offset_right = 51.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_7kymr")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_lock_ = true

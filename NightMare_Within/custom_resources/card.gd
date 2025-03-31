@@ -6,7 +6,8 @@ enum Rarity {BASIC, COMMON, RARE, EPIC, LEGEND}
 enum Target {SELF, SINGLE_ENEMY, ALL_ENEMIES, EVERYONE}
 
 const RARITY_COLORS := {
-	Card.Rarity.COMMON: Color.GRAY,
+	Card.Rarity.BASIC: Color.WHITE,
+	Card.Rarity.COMMON: Color.GREEN,
 	Card.Rarity.RARE: Color.CORNFLOWER_BLUE,
 	Card.Rarity.EPIC: Color.PURPLE,
 	Card.Rarity.LEGEND: Color.GOLD
@@ -16,6 +17,7 @@ const RARITY_COLORS := {
 @export var id: int
 @export var Cardname: String
 @export var type: Type
+@export var rarity: Rarity 
 @export var target: Target
 @export var cost: int
 @export var description: String
