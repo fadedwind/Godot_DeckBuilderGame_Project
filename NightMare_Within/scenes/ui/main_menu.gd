@@ -2,7 +2,7 @@ extends Control
 
 const CHAR_SELECTOR_SCENE := preload("res://scenes/ui/character_selector.tscn")
 
-@onready var continue_button: Button = %Continue
+@onready var continue_button: Button = $VBoxContainer/Continue
 
 func _ready() -> void:
 	get_tree().paused = false

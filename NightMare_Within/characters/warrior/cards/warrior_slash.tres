@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource("2_5q88v")
-id = 0
+id = 3
 Cardname = "劈斩"
 type = 0
 rarity = 4

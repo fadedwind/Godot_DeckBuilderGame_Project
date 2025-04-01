@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scenes/ui/card_visuals.gd" id="1_6thwy"]
 [ext_resource type="StyleBox" uid="uid://lmbk0b34o4ac" path="res://scenes/card_ui/card_dragging_stylebox.tres" id="1_id0tm"]
 [ext_resource type="Texture2D" uid="uid://qp4y08nikdju" path="res://art/cards/CardDesign2.png" id="2_4ijvf"]
-[ext_resource type="Script" path="res://characters/Warrior/cards/warrior_slash.gd" id="2_55pt2"]
+[ext_resource type="Resource" uid="uid://bafwh55iag38v" path="res://characters/Warrior/cards/warrior_slash.tres" id="2_le2nq"]
 [ext_resource type="LabelSettings" uid="uid://d2pg2i8yqkkp7" path="res://scenes/ui/text_label_settings.tres" id="3_vxvmf"]
 [ext_resource type="Texture2D" uid="uid://bfvi02kojsa00" path="res://art/ui/tile_0103.png" id="4_teyov"]
 [ext_resource type="Texture2D" uid="uid://cqqirgawswiy" path="res://art/cards/rarity1.png" id="5_7kymr"]
@@ -13,7 +13,7 @@ custom_minimum_size = Vector2(253, 394)
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_6thwy")
-card = ExtResource("2_55pt2")
+card = ExtResource("2_le2nq")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1

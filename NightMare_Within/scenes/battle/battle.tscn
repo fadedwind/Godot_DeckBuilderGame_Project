@@ -202,7 +202,6 @@ one_shot = true
 layer = 2
 
 [node name="BattleOverPanel" parent="BattleOverLayer" instance=ExtResource("18_x7tiv")]
-visible = false
 
 [node name="CardPileView" type="CanvasLayer" parent="."]
 layer = 4

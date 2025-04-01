@@ -6,9 +6,10 @@
 
 [resource]
 script = ExtResource("2_ec7iw")
-id = 0
+id = 2
 Cardname = "防御"
 type = 1
+rarity = 3
 target = 0
 cost = 1
 description = "获得5点格挡。"

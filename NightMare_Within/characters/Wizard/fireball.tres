@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://d25t4cp8lx72m"]
+
+[ext_resource type="Script" path="res://custom_resources/card.gd" id="1_hjr86"]
+
+[resource]
+script = ExtResource("1_hjr86")
+id = 5
+Cardname = "火球"
+type = 0
+rarity = 2
+target = 2
+cost = 0
+description = ""
+tooltip_text = ""

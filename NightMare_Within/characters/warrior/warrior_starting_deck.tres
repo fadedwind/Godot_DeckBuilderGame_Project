@@ -1,12 +1,13 @@
-[gd_resource type="Resource" script_class="CardPile" load_steps=6 format=3 uid="uid://yn3j47jxghep"]
+[gd_resource type="Resource" script_class="CardPile" load_steps=8 format=3 uid="uid://yn3j47jxghep"]
 
 [ext_resource type="Script" path="res://custom_resources/card.gd" id="1_n38ke"]
 [ext_resource type="Script" path="res://custom_resources/card_pile.gd" id="2_4yui4"]
 [ext_resource type="Resource" uid="uid://bf6dd86tmbdbl" path="res://characters/Warrior/cards/warrior_axe_attack.tres" id="2_gcqbw"]
 [ext_resource type="Resource" uid="uid://cdtenykymwm4c" path="res://characters/Warrior/cards/warrior_block.tres" id="3_i8858"]
 [ext_resource type="Resource" uid="uid://bafwh55iag38v" path="res://characters/Warrior/cards/warrior_slash.tres" id="3_nlkgm"]
-
+[ext_resource type="Resource" uid="uid://x8ymfle6vrq8" path="res://characters/Warrior/cards/strength_form.tres" id="5_hxpc3"]
+[ext_resource type="Resource" uid="uid://c1vpojhc12sh6" path="res://characters/Warrior/cards/bash.tres" id="6_w6u23"]
 
 [resource]
 script = ExtResource("2_4yui4")
-cards = Array[ExtResource("1_n38ke")]([ExtResource("2_gcqbw"), ExtResource("2_gcqbw"), ExtResource("2_gcqbw"), ExtResource("2_gcqbw"), ExtResource("2_gcqbw"), ExtResource("3_nlkgm"), ExtResource("3_i8858"), ExtResource("3_i8858"), ExtResource("3_i8858"), ExtResource("3_i8858")])
+cards = Array[ExtResource("1_n38ke")]([ExtResource("2_gcqbw"), ExtResource("2_gcqbw"), ExtResource("2_gcqbw"), ExtResource("2_gcqbw"), ExtResource("2_gcqbw"), ExtResource("3_nlkgm"), ExtResource("3_i8858"), ExtResource("3_i8858"), ExtResource("3_i8858"), ExtResource("3_i8858"), ExtResource("5_hxpc3"), ExtResource("6_w6u23")])

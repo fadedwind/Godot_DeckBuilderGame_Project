@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource("1_oxcyb")
-id = 0
+id = 1
 Cardname = "打击"
 type = 0
 rarity = 2
