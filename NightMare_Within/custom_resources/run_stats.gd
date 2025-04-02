@@ -5,7 +5,7 @@ signal gold_changed
 
 const STARTING_GOLD := 100
 
-const BASE_CARD_REWARDS := 4
+const BASE_CARD_REWARDS := 3
 const BASE_COMMON_WEIGHT := 5.6
 const BASE_RARE_WEIGHT := 3.2
 const BASE_EPIC_WEIGHT := 1.0

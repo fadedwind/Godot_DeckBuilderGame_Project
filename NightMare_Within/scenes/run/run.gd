@@ -80,6 +80,7 @@ func _on_battle_won() -> void:
 	##
 	reward_scene.add_gold_reward(77)
 	reward_scene.add_card_reward()
+	reward_scene.add_card_reward()
 	
 func _on_map_exited() -> void:
 	print("TODO: from the MAP, change view based on room type")

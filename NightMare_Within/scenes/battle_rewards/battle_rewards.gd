@@ -73,10 +73,10 @@ func _setup_card_chances() -> void:
 	card_rarity_weights[Card.Rarity.LEGEND] = card_reward_total_weight
 
 func _modify_weights(rarity_rolled: Card.Rarity) -> void:
-	if rarity_rolled == Card.Rarity.EPIC:
-		run_stats.epic_weight = RunStats.BASE_EPIC_WEIGHT
+	if rarity_rolled == Card.Rarity.LEGEND:
+		run_stats.legend_weight = RunStats.BASE_LEGEND_WEIGHT
 	else:
-		run_stats.epic_weight = clampf(run_stats.epic_weight + 0.3, run_stats.BASE_EPIC_WEIGHT, 5.0)
+		run_stats.legend_weight = clampf(run_stats.legend_weight + 0.2, run_stats.BASE_LEGEND_WEIGHT, 5.0)
 
 func _get_random_available_card(available_cards: Array[Card], with_rarity: Card.Rarity) -> Card:
 	var all_possible_cards := available_cards.filter(

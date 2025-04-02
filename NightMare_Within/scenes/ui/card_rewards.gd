@@ -33,7 +33,6 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
 		card_tooltip_popup.hide_tooltip()
 
-
 func _clear_rewards() -> void:
 	for card: Node in cards.get_children():
 		card.queue_free()
