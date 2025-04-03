@@ -8,6 +8,7 @@
 [ext_resource type="Resource" uid="uid://x8ymfle6vrq8" path="res://characters/Warrior/cards/strength_form.tres" id="5_hxpc3"]
 [ext_resource type="Resource" uid="uid://c1vpojhc12sh6" path="res://characters/Warrior/cards/bash.tres" id="6_w6u23"]
 
+
 [resource]
 script = ExtResource("2_4yui4")
 cards = Array[ExtResource("1_n38ke")]([ExtResource("2_gcqbw"), ExtResource("2_gcqbw"), ExtResource("2_gcqbw"), ExtResource("2_gcqbw"), ExtResource("2_gcqbw"), ExtResource("3_nlkgm"), ExtResource("3_i8858"), ExtResource("3_i8858"), ExtResource("3_i8858"), ExtResource("3_i8858"), ExtResource("5_hxpc3"), ExtResource("6_w6u23")])

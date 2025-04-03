@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bfvi02kojsa00" path="res://art/ui/tile_0103.png" id="4_teyov"]
 [ext_resource type="Texture2D" uid="uid://cqqirgawswiy" path="res://art/cards/rarity1.png" id="5_7kymr"]
 
+
 [node name="CardVisuals" type="Control"]
 custom_minimum_size = Vector2(253, 394)
 layout_mode = 3

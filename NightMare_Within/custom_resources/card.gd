@@ -2,14 +2,13 @@ class_name Card
 extends Resource
 
 enum Type {ATTACK, SKILL, POWER}
-enum Rarity {BASIC, COMMON, RARE, EPIC, LEGEND}
+enum Rarity {BASIC, COMMON, RARE, LEGEND}
 enum Target {SELF, SINGLE_ENEMY, ALL_ENEMIES, EVERYONE}
 
 const RARITY_COLORS := {
 	Card.Rarity.BASIC: Color.WHITE,
 	Card.Rarity.COMMON: Color.GREEN,
 	Card.Rarity.RARE: Color.CORNFLOWER_BLUE,
-	Card.Rarity.EPIC: Color.PURPLE,
 	Card.Rarity.LEGEND: Color.GOLD
 }
 

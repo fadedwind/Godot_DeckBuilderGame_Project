@@ -1,18 +1,18 @@
 [gd_resource type="Resource" load_steps=4 format=3 uid="uid://bf6dd86tmbdbl"]
 
-[ext_resource type="Texture2D" uid="uid://ck1t4hdip6xrl" path="res://art/others/tile_0119.png" id="1_ocxs5"]
-[ext_resource type="Script" path="res://characters/Warrior/cards/warrior_axe_attack.gd" id="1_oxcyb"]
-[ext_resource type="AudioStream" uid="uid://d3foovj7p0a6e" path="res://art/audio/STS_SFX_EnemyAtk_Knife_v1.ogg" id="3_jrgf6"]
+[ext_resource type="Texture2D" uid="uid://ck1t4hdip6xrl" path="res://art/others/tile_0119.png" id="1_5uvmg"]
+[ext_resource type="Script" path="res://characters/Warrior/cards/warrior_axe_attack.gd" id="2_f17dv"]
+[ext_resource type="AudioStream" uid="uid://d3foovj7p0a6e" path="res://art/audio/STS_SFX_EnemyAtk_Knife_v1.ogg" id="3_6dyxp"]
 
 [resource]
-script = ExtResource("1_oxcyb")
+script = ExtResource("2_f17dv")
 id = 1
 Cardname = "打击"
 type = 0
-rarity = 2
+rarity = 1
 target = 1
 cost = 1
 description = "造成6点伤害。"
-icon = ExtResource("1_ocxs5")
+icon = ExtResource("1_5uvmg")
 tooltip_text = "[center]造成[color=\"ff0000\"]6[/color]点伤害.[/center]"
-sound = ExtResource("3_jrgf6")
+sound = ExtResource("3_6dyxp")

@@ -17,7 +17,6 @@ var card_reward_total_weight := 0.0
 var card_rarity_weights := {
 	Card.Rarity.COMMON: 0.0,
 	Card.Rarity.RARE: 0.0,	
-	Card.Rarity.EPIC: 0.0,
 	Card.Rarity.LEGEND: 0.0,
 }
 
@@ -61,22 +60,20 @@ func _show_card_rewards() -> void:
 				card_reward_array.append(picked_card)
 				available_cards.erase(picked_card)
 				break
-
 	card_rewards.rewards = card_reward_array
 	card_rewards.show()
 	
 func _setup_card_chances() -> void:
-	card_reward_total_weight = run_stats.common_weight + run_stats.rare_weight + run_stats.epic_weight + run_stats.legend_weight 
+	card_reward_total_weight = run_stats.common_weight + run_stats.rare_weight + run_stats.legend_weight 
 	card_rarity_weights[Card.Rarity.COMMON] = run_stats.common_weight
 	card_rarity_weights[Card.Rarity.RARE] = run_stats.common_weight + run_stats.rare_weight
-	card_rarity_weights[Card.Rarity.EPIC] = run_stats.common_weight + run_stats.rare_weight + run_stats.epic_weight
 	card_rarity_weights[Card.Rarity.LEGEND] = card_reward_total_weight
 
 func _modify_weights(rarity_rolled: Card.Rarity) -> void:
 	if rarity_rolled == Card.Rarity.LEGEND:
 		run_stats.legend_weight = RunStats.BASE_LEGEND_WEIGHT
 	else:
-		run_stats.legend_weight = clampf(run_stats.legend_weight + 0.2, run_stats.BASE_LEGEND_WEIGHT, 5.0)
+		run_stats.legend_weight = clampf(run_stats.legend_weight + 0.3, run_stats.BASE_LEGEND_WEIGHT, 5.0)
 
 func _get_random_available_card(available_cards: Array[Card], with_rarity: Card.Rarity) -> Card:
 	var all_possible_cards := available_cards.filter(
@@ -85,15 +82,18 @@ func _get_random_available_card(available_cards: Array[Card], with_rarity: Card.
 	)
 	return all_possible_cards.pick_random()
 
-func _on_card_reward_taken(card: Card) -> void:
-	if not character_stats or not card:
-		return
-	character_stats.deck.add_card(card)
-	
 func _on_gold_reward_taken(amount: int) -> void:
 	if not run_stats:
 		return
 	run_stats.gold += amount
 
+func _on_card_reward_taken(card: Card) -> void:
+	if not character_stats or not card:
+		return
+	
+	print("Deck Brfore: \n %s \n" % character_stats.deck)	
+	character_stats.deck.add_card(card)
+	print("Deck After: \n %s \n" % character_stats.deck)	
+	
 func _on_back_button_pressed() -> void:
 	Events.battle_reward_exited.emit()

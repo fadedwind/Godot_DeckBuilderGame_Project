@@ -4,6 +4,7 @@
 [ext_resource type="Resource" uid="uid://bafwh55iag38v" path="res://characters/Warrior/cards/warrior_slash.tres" id="2_ea2s7"]
 [ext_resource type="PackedScene" uid="uid://bh760rtfg5icm" path="res://scenes/ui/card_visuals.tscn" id="3_eca2x"]
 
+
 [node name="CardMenuUI" type="CenterContainer"]
 offset_right = 40.0
 offset_bottom = 40.0
