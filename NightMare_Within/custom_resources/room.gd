@@ -10,10 +10,7 @@ enum Type {NOT_ASSIGNED, MONSTER, TREASURE, CAMPFIRE, SHOP, BOSS, EVENT}
 @export var next_rooms: Array[Room]
 @export var selected := false
 
-
-# This is only used by the EVENT room type
 @export var event_scene: PackedScene
-
 
 func _to_string() -> String:
 	return "%s (%s)" % [column, Type.keys()[type][0]]
