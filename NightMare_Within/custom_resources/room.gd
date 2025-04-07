@@ -3,6 +3,7 @@ extends Resource
 
 enum Type {NOT_ASSIGNED, MONSTER, TREASURE, CAMPFIRE, SHOP, BOSS, EVENT}
 
+
 @export var type: Type
 @export var row: int
 @export var column: int
@@ -11,6 +12,7 @@ enum Type {NOT_ASSIGNED, MONSTER, TREASURE, CAMPFIRE, SHOP, BOSS, EVENT}
 @export var selected := false
 
 @export var event_scene: PackedScene
+
 
 func _to_string() -> String:
 	return "%s (%s)" % [column, Type.keys()[type][0]]
