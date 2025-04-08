@@ -1,45 +1,42 @@
-[gd_scene load_steps=2 format=3 uid="uid://c3yu334t3xc8b"]
+[gd_scene load_steps=6 format=3 uid="uid://c3yu334t3xc8b"]
 
 [ext_resource type="Script" path="res://scenes/map/map.gd" id="1_ug64f"]
+[ext_resource type="Script" path="res://scenes/map/map_generator.gd" id="2_6nmaf"]
+[ext_resource type="PackedScene" uid="uid://bd44gnoixvmw2" path="res://scenes/map/map_line.tscn" id="2_euwc6"]
 
-[node name="Map" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[sub_resource type="Gradient" id="Gradient_7mach"]
+offsets = PackedFloat32Array(0, 0.504274, 1)
+colors = PackedColorArray(0.847059, 0.784314, 0.607843, 1, 0.729252, 0.679077, 0.993147, 1, 0.746358, 0.951295, 0.999131, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_m4mn6"]
+gradient = SubResource("Gradient_7mach")
+
+[node name="Map" type="Node2D"]
 script = ExtResource("1_ug64f")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 1
+[node name="Visuals" type="Node2D" parent="."]
+
+[node name="Lines" type="Node2D" parent="Visuals"]
+unique_name_in_owner = true
+
+[node name="Line2D" parent="Visuals/Lines" instance=ExtResource("2_euwc6")]
+
+[node name="Rooms" type="Node2D" parent="Visuals"]
+unique_name_in_owner = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(1194, 844)
+
+[node name="MapGenerator" type="Node" parent="."]
+script = ExtResource("2_6nmaf")
+
+[node name="MapBackground" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Background" type="TextureRect" parent="MapBackground"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 1)
-
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -34.0
-offset_top = -29.0
-offset_right = 34.0
-offset_bottom = 29.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Label" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-text = "map"
-
-[node name="Button" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "go back"
-
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+texture = SubResource("GradientTexture1D_m4mn6")
