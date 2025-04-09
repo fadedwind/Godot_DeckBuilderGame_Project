@@ -8,6 +8,7 @@ const GOLD_TEXT := "%s gold"
 const CARD_ICON := preload("res://art/cards/rarity1.png")
 const CARD_TEXT := "Add New Card"
 
+
 @export var run_stats: RunStats
 @export var character_stats: CharacterStats
 

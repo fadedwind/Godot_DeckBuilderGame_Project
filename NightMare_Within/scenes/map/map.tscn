@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://c3yu334t3xc8b"]
+[gd_scene load_steps=5 format=3 uid="uid://c3yu334t3xc8b"]
 
 [ext_resource type="Script" path="res://scenes/map/map.gd" id="1_ug64f"]
 [ext_resource type="Script" path="res://scenes/map/map_generator.gd" id="2_6nmaf"]
-[ext_resource type="PackedScene" uid="uid://bd44gnoixvmw2" path="res://scenes/map/map_line.tscn" id="2_euwc6"]
 
 [sub_resource type="Gradient" id="Gradient_7mach"]
 offsets = PackedFloat32Array(0, 0.504274, 1)
@@ -18,8 +17,6 @@ script = ExtResource("1_ug64f")
 
 [node name="Lines" type="Node2D" parent="Visuals"]
 unique_name_in_owner = true
-
-[node name="Line2D" parent="Visuals/Lines" instance=ExtResource("2_euwc6")]
 
 [node name="Rooms" type="Node2D" parent="Visuals"]
 unique_name_in_owner = true
