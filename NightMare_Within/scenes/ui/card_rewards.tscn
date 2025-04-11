@@ -9,6 +9,7 @@
 [ext_resource type="Resource" uid="uid://x8ymfle6vrq8" path="res://characters/Warrior/cards/strength_form.tres" id="4_coqla"]
 [ext_resource type="Resource" uid="uid://bafwh55iag38v" path="res://characters/Warrior/cards/warrior_slash.tres" id="6_56a1k"]
 
+
 [node name="CardRewards" type="ColorRect"]
 anchors_preset = 15
 anchor_right = 1.0

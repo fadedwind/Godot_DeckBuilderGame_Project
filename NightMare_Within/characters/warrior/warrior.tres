@@ -7,6 +7,7 @@
 [ext_resource type="Resource" uid="uid://cdu8ne3yq3i0" path="res://characters/Warrior/warrior_draftable_cards.tres" id="2_jpiwv"]
 
 
+
 [resource]
 script = ExtResource("1_0jqec")
 character_name = "Warrior"
