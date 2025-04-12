@@ -1,15 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://cfw7gyeo38d1d"]
+[gd_scene load_steps=2 format=3 uid="uid://bnu8ilk0fymmc"]
 
-[ext_resource type="Script" path="res://scenes/restsite/restsite.gd" id="1_dnaq6"]
+[ext_resource type="Script" path="res://scenes/event/eventwindow.gd" id="1_7phi5"]
 
-[node name="restsite" type="Control"]
+[node name="eventwindow" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_dnaq6")
+script = ExtResource("1_7phi5")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -36,7 +36,7 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "restsite"
+text = "event"
 
 [node name="Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2

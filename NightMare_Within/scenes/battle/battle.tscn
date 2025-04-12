@@ -48,19 +48,19 @@ texture = ExtResource("4_noxjk")
 metadata/_edit_lock_ = true
 
 [node name="EnemyHandler" type="Node2D" parent="."]
-position = Vector2(2181, 833.821)
+position = Vector2(0, 4.76837e-07)
 script = ExtResource("5_egp1s")
 
 [node name="Enemy2" parent="EnemyHandler" instance=ExtResource("2_qdovh")]
-position = Vector2(-769, 217.389)
+position = Vector2(1407, 1150.47)
 stats = ExtResource("9_2g4hw")
 
 [node name="Enemy1" parent="EnemyHandler" instance=ExtResource("2_qdovh")]
-position = Vector2(-387, 285.879)
+position = Vector2(1780, 1099.85)
 stats = ExtResource("7_lte54")
 
 [node name="Enemy2_2" parent="EnemyHandler" instance=ExtResource("2_qdovh")]
-position = Vector2(-4, 226.323)
+position = Vector2(2154, 1073.05)
 stats = ExtResource("9_2g4hw")
 
 [node name="CardDropArea" type="Area2D" parent="."]

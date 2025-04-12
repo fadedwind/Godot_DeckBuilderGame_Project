@@ -7,6 +7,7 @@ const RESTSITE_SCENE := preload("res://scenes/restsite/restsite.tscn")
 const MAP_SCENE := preload("res://scenes/map/map.tscn")
 const SHOP_SCENE := preload("res://scenes/shop/shop.tscn")
 const TREASURE_SCENE := preload("res://scenes/treasure/treasure.tscn")
+const EVENT_SCENE := preload("res://scenes/event/eventwindow.tscn")
 
 @export var run_startup: RunStartup
 
@@ -112,4 +113,4 @@ func _on_map_exited(room: Room) -> void:
 		Room.Type.BOSS:
 			_on_battle_room_entered(room)
 		Room.Type.EVENT:
-			_change_view(BATTLE_SCENE)
+			_change_view(EVENT_SCENE)

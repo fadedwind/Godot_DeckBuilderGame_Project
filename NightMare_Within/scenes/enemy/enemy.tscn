@@ -11,15 +11,17 @@
 size = Vector2(353.5, 303.253)
 
 [node name="Enemy" type="Area2D" groups=["enemies"]]
-position = Vector2(1816, 1035.33)
+position = Vector2(-1, 2)
 collision_layer = 4
 script = ExtResource("1_xsmfc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_37q1c")
+position = Vector2(0, -0.329956)
 texture = ExtResource("1_vtaxb")
 
 [node name="Arrow" type="Sprite2D" parent="."]
+position = Vector2(0, -0.329956)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -28,15 +30,17 @@ shape = SubResource("RectangleShape2D_whkqg")
 
 [node name="StatsUI" parent="." instance=ExtResource("2_f8364")]
 offset_left = -444.0
-offset_top = -236.33
+offset_top = -236.66
 offset_right = 456.0
-offset_bottom = -36.33
+offset_bottom = -36.6599
+metadata/_edit_use_anchors_ = true
 
 [node name="IntentUI" parent="." instance=ExtResource("4_4d67b")]
 offset_left = -165.0
-offset_top = -66.33
+offset_top = -66.6599
 offset_right = -65.0
-offset_bottom = 13.67
+offset_bottom = 13.3401
+metadata/_edit_use_anchors_ = true
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

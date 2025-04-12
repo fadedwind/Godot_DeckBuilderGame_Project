@@ -38,3 +38,6 @@ signal restsite_exited
 
 #Treasure Room-related events
 signal treasure_room_exited
+
+#event-related events
+signal event_exited

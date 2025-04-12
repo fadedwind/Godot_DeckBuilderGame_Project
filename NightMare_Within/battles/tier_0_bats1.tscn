@@ -1,14 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://beqdvrhm18in0"]
+[gd_scene load_steps=4 format=3 uid="uid://beqdvrhm18in0"]
 
 [ext_resource type="PackedScene" uid="uid://cm1mvr4ni6x58" path="res://scenes/enemy/enemy.tscn" id="1_f5xr0"]
 [ext_resource type="Resource" uid="uid://dfps2fl7pxdp2" path="res://enemies/s1_01/s1_01_enemy.tres" id="2_deke0"]
+[ext_resource type="Resource" uid="uid://d2f2fyrqjaa4y" path="res://enemies/s1_02/s1_02_enemy.tres" id="3_raxbw"]
 
 [node name="Tier0Bats1" type="Node2D"]
 
 [node name="Enemy" parent="." instance=ExtResource("1_f5xr0")]
-position = Vector2(1492, 1040)
+position = Vector2(1973, 974)
 stats = ExtResource("2_deke0")
 
 [node name="Enemy2" parent="." instance=ExtResource("1_f5xr0")]
-position = Vector2(1978, 902)
-stats = ExtResource("2_deke0")
+position = Vector2(1499, 1170)
+stats = ExtResource("3_raxbw")
