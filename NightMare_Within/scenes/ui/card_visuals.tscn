@@ -10,6 +10,7 @@
 
 
 
+
 [node name="CardVisuals" type="Control"]
 custom_minimum_size = Vector2(253, 394)
 layout_mode = 3

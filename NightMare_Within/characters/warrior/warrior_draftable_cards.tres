@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://custom_resources/card_pile.gd" id="5_f3w41"]
 
 
+
 [resource]
 script = ExtResource("5_f3w41")
 cards = Array[ExtResource("1_0gn6h")]([ExtResource("2_bvpsu"), ExtResource("2_bvpsu"), ExtResource("2_bvpsu"), ExtResource("3_q2vqc"), ExtResource("3_q2vqc"), ExtResource("3_q2vqc"), ExtResource("4_tidu4"), ExtResource("4_tidu4"), ExtResource("4_tidu4"), ExtResource("3_q2vqc"), ExtResource("4_tidu4"), ExtResource("2_bvpsu")])

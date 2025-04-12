@@ -6,6 +6,7 @@
 
 
 
+
 [resource]
 script = ExtResource("1_xwqmg")
 character_name = "Wizard"

@@ -6,6 +6,7 @@
 
 
 
+
 [resource]
 script = ExtResource("1_31ocq")
 character_name = "Ranger"
