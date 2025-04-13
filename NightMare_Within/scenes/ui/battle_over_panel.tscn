@@ -5,7 +5,7 @@
 [ext_resource type="LabelSettings" uid="uid://cw3dwexqhewxp" path="res://scenes/ui/GameTitleLabel.tres" id="2_vd3x6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lgsb7"]
-bg_color = Color(0.10748, 0.10748, 0.10748, 1)
+bg_color = Color(0, 0, 0, 0.545098)
 
 [node name="BattleOverPanel" type="Panel"]
 process_mode = 3
