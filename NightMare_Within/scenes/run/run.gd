@@ -91,6 +91,10 @@ func _on_battle_room_entered(room: Room) -> void:
 	battle_scene.battle_stats = room.battle_stats
 	battle_scene.start_battle()
 
+func _on_restsite_entered() -> void:
+	var restsite := _change_view(RESTSITE_SCENE) as Restsite
+	restsite.char_stats = character
+	
 func _on_battle_won() -> void:
 	var reward_scene := _change_view(BATTLE_REWARD_SCENE) as BattleReward
 	reward_scene.run_stats = stats
@@ -107,7 +111,7 @@ func _on_map_exited(room: Room) -> void:
 		Room.Type.TREASURE:
 			_change_view(TREASURE_SCENE)
 		Room.Type.CAMPFIRE:
-			_change_view(RESTSITE_SCENE)
+			_on_restsite_entered()
 		Room.Type.SHOP:
 			_change_view(SHOP_SCENE)
 		Room.Type.BOSS:

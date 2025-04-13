@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://cfw7gyeo38d1d"]
+[gd_scene load_steps=4 format=3 uid="uid://cfw7gyeo38d1d"]
 
 [ext_resource type="Script" path="res://scenes/restsite/restsite.gd" id="1_dnaq6"]
+[ext_resource type="Texture2D" uid="uid://bbj8ntjkj71hd" path="res://art/background/restsite1.png" id="2_8ychj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wkbiq"]
+font_size = 40
+font_color = Color(0.647367, 0.647215, 1, 1)
 
 [node name="restsite" type="Control"]
 layout_mode = 3
@@ -11,35 +16,60 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_dnaq6")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
+[node name="backgroundLayer" type="CanvasLayer" parent="."]
+layer = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
+[node name="Sprite2D" type="Sprite2D" parent="backgroundLayer"]
+position = Vector2(191, 835)
+scale = Vector2(1.00499, 1.01709)
+texture = ExtResource("2_8ychj")
+
+[node name="ParticlesLayer" type="CanvasLayer" parent="."]
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+
+[node name="UI" type="VBoxContainer" parent="UILayer"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -34.0
-offset_top = -29.0
-offset_right = 34.0
-offset_bottom = 29.0
+offset_left = -230.0
+offset_top = -156.5
+offset_right = 230.0
+offset_bottom = 143.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 10
 
-[node name="Label" type="Label" parent="VBoxContainer"]
+[node name="Title" type="Label" parent="UILayer/UI"]
 layout_mode = 2
-text = "restsite"
+text = "休整一下吧"
+label_settings = SubResource("LabelSettings_wkbiq")
+horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="VBoxContainer"]
+[node name="RestButton" type="Button" parent="UILayer/UI"]
 layout_mode = 2
-text = "go back"
+size_flags_horizontal = 4
+text = "睡觉"
 
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[node name="Description" type="Label" parent="UILayer/UI"]
+custom_minimum_size = Vector2(460, 40)
+layout_mode = 2
+text = "(回复30% HP)
+"
+horizontal_alignment = 1
+
+[node name="UpgradeButton2" type="Button" parent="UILayer/UI"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "升级"
+
+[node name="Description2" type="Label" parent="UILayer/UI"]
+custom_minimum_size = Vector2(460, 40)
+layout_mode = 2
+text = "(选择一张卡牌升级)
+"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="UILayer/UI/RestButton" to="." method="_on_rest_button_pressed"]

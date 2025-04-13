@@ -6,9 +6,6 @@
 [ext_resource type="Resource" uid="uid://yn3j47jxghep" path="res://characters/Warrior/warrior_starting_deck.tres" id="2_056w3"]
 [ext_resource type="Resource" uid="uid://cdu8ne3yq3i0" path="res://characters/Warrior/warrior_draftable_cards.tres" id="2_jpiwv"]
 
-
-
-
 [resource]
 script = ExtResource("1_0jqec")
 character_name = "Warrior"
