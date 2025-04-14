@@ -4,11 +4,13 @@ extends Resource
 signal status_applied(status: Status)
 signal status_changed
 
+enum BuffType {BUFF, DOT_DEBUFF, CONTROL_DEBUFF, WEAKING_DEBUFF}
 enum Type {START_OF_TURN, END_OF_TURN, EVENT_BASED}
 enum StackType {NONE, INTENSITY, DURATION, BOTH}
 
 @export_group("Status Data")
 @export var id: String
+@export var buff_type : BuffType
 @export var type: Type
 @export var stack_type: StackType
 @export var can_expire: bool
@@ -21,7 +23,7 @@ enum StackType {NONE, INTENSITY, DURATION, BOTH}
 
 func initialize_status(_target: Node) -> void:
 	pass
-
+	
 func apply_status(_target: Node) -> void:
 	status_applied.emit(self)
 
