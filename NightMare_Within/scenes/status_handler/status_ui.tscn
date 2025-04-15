@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3ypakoprj66r"]
+
+[ext_resource type="Script" path="res://scenes/status_handler/status_ui.gd" id="1_w6f22"]
+[ext_resource type="Texture2D" uid="uid://bkbq8fp05g52y" path="res://art/buffs/exposed.png" id="1_wyy26"]
+
+[node name="StatusUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w6f22")
+
+[node name="Icon" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 50.0
+offset_bottom = 50.0
+texture = ExtResource("1_wyy26")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Duration" type="Label" parent="."]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 23.0
+offset_right = 46.0
+offset_bottom = 46.0
+text = "99"
+horizontal_alignment = 1
+
+[node name="Stacks" type="Label" parent="."]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 23.0
+offset_right = 57.0
+offset_bottom = 46.0
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 1

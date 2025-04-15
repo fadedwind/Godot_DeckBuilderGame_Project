@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Status" load_steps=2 format=3 uid="uid://epqbrpn1wwyd"]
+[gd_resource type="Resource" script_class="Status" load_steps=3 format=3 uid="uid://epqbrpn1wwyd"]
 
+[ext_resource type="Texture2D" uid="uid://bkbq8fp05g52y" path="res://art/buffs/exposed.png" id="1_5o5uw"]
 [ext_resource type="Script" path="res://custom_resources/status.gd" id="1_wqks7"]
 
 [resource]
@@ -9,6 +10,7 @@ buff_type = 3
 type = 0
 stack_type = 2
 can_expire = true
-duration = 0
+duration = 1
 stacks = 0
-tooltip = ""
+icon = ExtResource("1_5o5uw")
+tooltip = "TODO"

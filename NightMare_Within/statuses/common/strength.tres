@@ -1,13 +1,16 @@
-[gd_resource type="Resource" script_class="Status" load_steps=2 format=3 uid="uid://dun46hvt6jurw"]
+[gd_resource type="Resource" script_class="Status" load_steps=3 format=3 uid="uid://dun46hvt6jurw"]
 
 [ext_resource type="Script" path="res://custom_resources/status.gd" id="1_f3reo"]
+[ext_resource type="Texture2D" uid="uid://deh8o5pabjp6v" path="res://art/buffs/strength.png" id="1_fptte"]
 
 [resource]
 script = ExtResource("1_f3reo")
-id = ""
-type = 0
-stack_type = 0
+id = "strength"
+buff_type = 0
+type = 2
+stack_type = 1
 can_expire = false
 duration = 0
-stacks = 0
-tooltip = ""
+stacks = 2
+icon = ExtResource("1_fptte")
+tooltip = "TODO"
