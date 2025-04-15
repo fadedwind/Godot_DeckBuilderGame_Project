@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://d3ypakoprj66r"]
+[gd_scene load_steps=4 format=3 uid="uid://d3ypakoprj66r"]
 
 [ext_resource type="Script" path="res://scenes/status_handler/status_ui.gd" id="1_w6f22"]
 [ext_resource type="Texture2D" uid="uid://bkbq8fp05g52y" path="res://art/buffs/exposed.png" id="1_wyy26"]
+[ext_resource type="Resource" uid="uid://dun46hvt6jurw" path="res://statuses/common/strength.tres" id="2_vahap"]
 
 [node name="StatusUI" type="Control"]
 layout_mode = 3
@@ -11,6 +12,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_w6f22")
+status = ExtResource("2_vahap")
 
 [node name="Icon" type="TextureRect" parent="."]
 layout_mode = 0

@@ -7,7 +7,6 @@ extends Control
 @onready var duration: Label = $Duration
 @onready var stacks: Label = $Stacks
 
-
 func set_status(new_status: Status) -> void:
 	if not is_node_ready():
 		await ready
@@ -27,7 +26,6 @@ func set_status(new_status: Status) -> void:
 		status.status_changed.connect(_on_status_changed)
 	
 	_on_status_changed()
-
 
 func _on_status_changed() -> void:
 	if not status:

@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cm1mvr4ni6x58"]
+[gd_scene load_steps=8 format=3 uid="uid://cm1mvr4ni6x58"]
 
 [ext_resource type="Texture2D" uid="uid://d1rd1bpleiowq" path="res://art/enemy/slime.png" id="1_vtaxb"]
 [ext_resource type="Script" path="res://scenes/enemy/enemy.gd" id="1_xsmfc"]
 [ext_resource type="PackedScene" uid="uid://bt0xalhdg45xk" path="res://scenes/ui/stats_ui.tscn" id="2_f8364"]
 [ext_resource type="PackedScene" uid="uid://b1bvh78hr5w48" path="res://scenes/ui/intent_ui.tscn" id="4_4d67b"]
+[ext_resource type="PackedScene" uid="uid://74owpyd1aw4q" path="res://scenes/status_handler/status_handler.tscn" id="5_2081s"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_37q1c"]
 
@@ -41,6 +42,13 @@ offset_top = -66.6599
 offset_right = -65.0
 offset_bottom = 13.3401
 metadata/_edit_use_anchors_ = true
+
+[node name="StatusHandler" parent="." node_paths=PackedStringArray("status_owner") instance=ExtResource("5_2081s")]
+offset_left = -187.0
+offset_top = 254.0
+offset_right = 213.0
+offset_bottom = 454.0
+status_owner = NodePath("..")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

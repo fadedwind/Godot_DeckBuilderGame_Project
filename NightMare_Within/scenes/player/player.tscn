@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ccjl5pwx06f2m"]
+[gd_scene load_steps=5 format=3 uid="uid://ccjl5pwx06f2m"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_keo0m"]
 [ext_resource type="Texture2D" uid="uid://5ok7cmetj0q2" path="res://characters/Ranger/Rangerbattle.png" id="2_aheb1"]
 [ext_resource type="PackedScene" uid="uid://bt0xalhdg45xk" path="res://scenes/ui/stats_ui.tscn" id="2_typq8"]
+[ext_resource type="PackedScene" uid="uid://74owpyd1aw4q" path="res://scenes/status_handler/status_handler.tscn" id="4_cl7k4"]
 
 [node name="Player" type="Node2D" groups=["player"]]
 script = ExtResource("1_keo0m")
@@ -17,3 +18,10 @@ offset_left = -452.0
 offset_top = -26.0
 offset_right = 448.0
 offset_bottom = 174.0
+
+[node name="StatusHandler" parent="." node_paths=PackedStringArray("status_owner") instance=ExtResource("4_cl7k4")]
+offset_left = -186.0
+offset_top = 491.0
+offset_right = 214.0
+offset_bottom = 691.0
+status_owner = NodePath("..")
