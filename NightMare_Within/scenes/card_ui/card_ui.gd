@@ -7,6 +7,7 @@ const BASE_STYLEBOX := preload("res://scenes/card_ui/card_base_stylebox.tres")
 const DRAG_STYLEBOX := preload("res://scenes/card_ui/card_dragging_stylebox.tres")
 const HOVER_STYLEBOX := preload("res://scenes/card_ui/card_hover_stylebox.tres")
 
+@export var player_modifiers: ModifierHandler
 @export var card: Card : set = _set_card
 @export var char_stats: CharacterStats : set = _set_char_stats
 
@@ -38,8 +39,27 @@ func animate_to_position(new_position: Vector2, duration: float) -> void:
 func play() -> void:
 	if not card:	
 		return
-	card.play(targets, char_stats)
+	card.play(targets, char_stats, player_modifiers)
 	queue_free()
+	
+
+func get_active_enemy_modifiers() -> ModifierHandler:
+	if targets.is_empty() or targets.size() > 1 or not targets[0] is Enemy:
+		return null
+	
+	return targets[0].modifier_handler
+	
+
+func is_hovered() -> bool:
+	var rect := Rect2(Vector2.ZERO, self.size)
+	return rect.has_point(get_local_mouse_position())
+
+
+func request_tooltip() -> void:
+	var enemy_modifiers := get_active_enemy_modifiers()
+	var updated_tooltip := card.get_updated_tooltip(player_modifiers, enemy_modifiers)
+	Events.card_tooltip_requested.emit(card.icon, updated_tooltip)
+
 	
 func _on_gui_input(event:InputEvent) -> void:
 	card_state_machine.on_gui_input(event)
@@ -69,7 +89,8 @@ func _set_playable(value: bool) -> void:
 func _set_char_stats(value: CharacterStats) -> void:
 	char_stats = value
 	char_stats.stats_changed.connect(_on_char_stats_changed)
-		
+	_on_char_stats_changed()
+	
 func _on_drop_point_detector_area_entered(area: Area2D) -> void:
 	if not targets.has(area):
 		targets.append(area)

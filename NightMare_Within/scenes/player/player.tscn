@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://ccjl5pwx06f2m"]
+[gd_scene load_steps=7 format=3 uid="uid://ccjl5pwx06f2m"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_keo0m"]
 [ext_resource type="Texture2D" uid="uid://5ok7cmetj0q2" path="res://characters/Ranger/Rangerbattle.png" id="2_aheb1"]
 [ext_resource type="PackedScene" uid="uid://bt0xalhdg45xk" path="res://scenes/ui/stats_ui.tscn" id="2_typq8"]
 [ext_resource type="PackedScene" uid="uid://74owpyd1aw4q" path="res://scenes/status_handler/status_handler.tscn" id="4_cl7k4"]
+[ext_resource type="PackedScene" uid="uid://cm2uummqnkl3v" path="res://scenes/modifier_handler/modifier_handler.tscn" id="5_q2uwy"]
+[ext_resource type="PackedScene" uid="uid://banf6vwgkvlf3" path="res://scenes/modifier_handler/modfier.tscn" id="6_yytir"]
 
 [node name="Player" type="Node2D" groups=["player"]]
 script = ExtResource("1_keo0m")
@@ -25,3 +27,13 @@ offset_top = 421.0
 offset_right = 273.0
 offset_bottom = 621.0
 status_owner = NodePath("..")
+
+[node name="ModifierHandler" parent="." instance=ExtResource("5_q2uwy")]
+
+[node name="DamageDealtModifierModfier" parent="ModifierHandler" instance=ExtResource("6_yytir")]
+
+[node name="DamageTakerModfier" parent="ModifierHandler" instance=ExtResource("6_yytir")]
+type = 1
+
+[node name="CardCostModfier" parent="ModifierHandler" instance=ExtResource("6_yytir")]
+type = 2
