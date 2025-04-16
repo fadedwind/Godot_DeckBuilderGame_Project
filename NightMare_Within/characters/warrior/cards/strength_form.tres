@@ -13,6 +13,7 @@ rarity = 3
 target = 0
 cost = 3
 description = "回合开始时，获得2点力量。"
+exhausts = true
 icon = ExtResource("1_ebbmd")
 tooltip_text = "[center]回合开始时，获得2点力量。[/center]"
 sound = ExtResource("3_w4aab")

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="StrengthStatus" load_steps=3 format=3 uid="uid://dun46hvt6jurw"]
 
-[ext_resource type="Texture2D" uid="uid://deh8o5pabjp6v" path="res://art/buffs/strength.png" id="1_fptte"]
 [ext_resource type="Script" path="res://statuses/common/strength.gd" id="1_s38px"]
+[ext_resource type="Texture2D" uid="uid://deh8o5pabjp6v" path="res://art/buffs/strength.png" id="1_ub3vs"]
 
 [resource]
 script = ExtResource("1_s38px")
@@ -12,5 +12,5 @@ stack_type = 0
 can_expire = false
 duration = 0
 stacks = 0
-icon = ExtResource("1_fptte")
+icon = ExtResource("1_ub3vs")
 tooltip = ""

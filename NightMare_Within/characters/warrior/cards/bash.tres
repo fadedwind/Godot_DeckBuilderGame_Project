@@ -13,6 +13,7 @@ rarity = 1
 target = 1
 cost = 2
 description = "造成8点伤害,施加2层易伤。"
+exhausts = false
 icon = ExtResource("1_g7u6g")
 tooltip_text = "[center]造成[color=\"ff0000\"]8[/color]点伤害,施加2层易伤。[/center]"
 sound = ExtResource("3_6015n")

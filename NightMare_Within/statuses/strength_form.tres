@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="Status" load_steps=3 format=3 uid="uid://b6144x3y8j7fx"]
+[gd_resource type="Resource" script_class="StrengthformStatus" load_steps=3 format=3 uid="uid://b6144x3y8j7fx"]
 
-[ext_resource type="Script" path="res://custom_resources/status.gd" id="1_1ja6w"]
 [ext_resource type="Texture2D" uid="uid://blpnxmyicqidb" path="res://art/buffs/true_strength.png" id="1_6n5p5"]
+[ext_resource type="Script" path="res://statuses/strength_form.gd" id="1_fp7kv"]
 
 [resource]
-script = ExtResource("1_1ja6w")
+script = ExtResource("1_fp7kv")
 id = "strength_form"
 buff_type = 0
 type = 0

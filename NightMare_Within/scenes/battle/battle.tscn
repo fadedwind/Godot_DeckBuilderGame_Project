@@ -72,7 +72,7 @@ shape = SubResource("RectangleShape2D_1hloe")
 debug_color = Color(0.998697, 0.994905, 0.991772, 0.42)
 
 [node name="Player" parent="." instance=ExtResource("8_x0pb2")]
-position = Vector2(844, 859.63)
+position = Vector2(838, 852.682)
 stats = ExtResource("4_edhhu")
 
 [node name="CardTargetSelector" parent="." instance=ExtResource("3_1ytil")]
