@@ -21,6 +21,7 @@ func set_character_stats(value: CharacterStats) -> void:
 		
 	update_player()
 	
+	
 func update_player() -> void:
 	if not stats is CharacterStats:
 		return
