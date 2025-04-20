@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cm1mvr4ni6x58"]
+[gd_scene load_steps=10 format=3 uid="uid://cm1mvr4ni6x58"]
 
 [ext_resource type="Texture2D" uid="uid://d1rd1bpleiowq" path="res://art/enemy/slime.png" id="1_vtaxb"]
 [ext_resource type="Script" path="res://scenes/enemy/enemy.gd" id="1_xsmfc"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b1bvh78hr5w48" path="res://scenes/ui/intent_ui.tscn" id="4_4d67b"]
 [ext_resource type="PackedScene" uid="uid://74owpyd1aw4q" path="res://scenes/status_handler/status_handler.tscn" id="5_2081s"]
 [ext_resource type="PackedScene" uid="uid://cm2uummqnkl3v" path="res://scenes/modifier_handler/modifier_handler.tscn" id="6_b55d3"]
+[ext_resource type="PackedScene" uid="uid://banf6vwgkvlf3" path="res://scenes/modifier_handler/modifier.tscn" id="7_c3o0r"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_37q1c"]
 
@@ -52,6 +53,10 @@ offset_bottom = 454.0
 status_owner = NodePath("..")
 
 [node name="ModifierHandler" parent="." instance=ExtResource("6_b55d3")]
+
+[node name="DamageDealtModifier" parent="ModifierHandler" instance=ExtResource("7_c3o0r")]
+
+[node name="DamageTakenModifier" parent="ModifierHandler" instance=ExtResource("7_c3o0r")]
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

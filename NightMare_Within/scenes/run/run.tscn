@@ -69,7 +69,7 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 80.0
 grow_horizontal = 2
-color = Color(0.283291, 0.000763065, 0.680055, 1)
+color = Color(0.282353, 0, 0.678431, 0.552941)
 
 [node name="BarItems" type="HBoxContainer" parent="TopBar"]
 anchors_preset = 10

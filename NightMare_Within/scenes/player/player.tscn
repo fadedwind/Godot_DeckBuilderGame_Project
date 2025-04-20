@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bt0xalhdg45xk" path="res://scenes/ui/stats_ui.tscn" id="2_typq8"]
 [ext_resource type="PackedScene" uid="uid://74owpyd1aw4q" path="res://scenes/status_handler/status_handler.tscn" id="4_cl7k4"]
 [ext_resource type="PackedScene" uid="uid://cm2uummqnkl3v" path="res://scenes/modifier_handler/modifier_handler.tscn" id="5_q2uwy"]
-[ext_resource type="PackedScene" uid="uid://banf6vwgkvlf3" path="res://scenes/modifier_handler/modfier.tscn" id="6_yytir"]
+[ext_resource type="PackedScene" uid="uid://banf6vwgkvlf3" path="res://scenes/modifier_handler/modifier.tscn" id="6_yytir"]
 
 [node name="Player" type="Node2D" groups=["player"]]
 script = ExtResource("1_keo0m")
@@ -22,11 +22,10 @@ offset_right = 448.0
 offset_bottom = 174.0
 
 [node name="StatusHandler" parent="." node_paths=PackedStringArray("status_owner") instance=ExtResource("4_cl7k4")]
-offset_left = -127.0
-offset_top = 421.0
-offset_right = 357.0
-offset_bottom = 516.0
-columns = 10
+offset_left = -187.0
+offset_top = 254.0
+offset_right = 213.0
+offset_bottom = 454.0
 status_owner = NodePath("..")
 
 [node name="ModifierHandler" parent="." instance=ExtResource("5_q2uwy")]

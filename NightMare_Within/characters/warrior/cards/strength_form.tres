@@ -1,11 +1,10 @@
-[gd_resource type="Resource" script_class="Card" load_steps=4 format=3 uid="uid://x8ymfle6vrq8"]
+[gd_resource type="Resource" script_class="StrengthFormStatus" load_steps=3 format=3 uid="uid://x8ymfle6vrq8"]
 
 [ext_resource type="Texture2D" uid="uid://cn2c1psh561cc" path="res://art/others/tile_0127.png" id="1_ebbmd"]
-[ext_resource type="Script" path="res://custom_resources/card.gd" id="2_dkxbe"]
-[ext_resource type="AudioStream" uid="uid://df64e7qat73gs" path="res://art/audio/block.ogg" id="3_w4aab"]
+[ext_resource type="Script" path="res://characters/Warrior/cards/strength_form.gd" id="2_bfqa4"]
 
 [resource]
-script = ExtResource("2_dkxbe")
+script = ExtResource("2_bfqa4")
 id = 0
 Cardname = "力量形态"
 type = 2
@@ -16,4 +15,3 @@ description = "回合开始时，获得2点力量。"
 exhausts = true
 icon = ExtResource("1_ebbmd")
 tooltip_text = "[center]回合开始时，获得2点力量。[/center]"
-sound = ExtResource("3_w4aab")

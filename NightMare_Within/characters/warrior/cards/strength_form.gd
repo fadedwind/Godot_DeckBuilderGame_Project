@@ -1,3 +1,4 @@
+class_name StrengthFormStatus
 extends Card
 
 const TRUE_STRENGTH_FORM_STATUS = preload("res://statuses/strength_form.tres")

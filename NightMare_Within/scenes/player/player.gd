@@ -13,6 +13,7 @@ const WHITE_SPRITE_MATERIAL := preload("res://art/white_sprite_material.tres")
 func _ready() -> void:
 	status_handler.status_owner = self
 
+	
 func set_character_stats(value: CharacterStats) -> void:
 	stats = value
 
@@ -20,7 +21,6 @@ func set_character_stats(value: CharacterStats) -> void:
 		stats.stats_changed.connect(update_stats)
 		
 	update_player()
-	
 	
 func update_player() -> void:
 	if not stats is CharacterStats:
