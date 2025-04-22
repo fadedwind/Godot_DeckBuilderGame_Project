@@ -7,10 +7,10 @@
 script = ExtResource("1_s38px")
 id = ""
 buff_type = 0
-type = 0
-stack_type = 0
+type = 2
+stack_type = 1
 can_expire = false
 duration = 0
-stacks = 0
+stacks = 2
 icon = ExtResource("1_ub3vs")
 tooltip = ""

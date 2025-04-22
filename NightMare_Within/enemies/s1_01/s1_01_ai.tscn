@@ -11,17 +11,17 @@
 
 [sub_resource type="Resource" id="Resource_aq288"]
 script = ExtResource("3_uou3m")
-number = "7"
+base_text = "%s"
 icon = ExtResource("3_6l87g")
 
 [sub_resource type="Resource" id="Resource_vx0av"]
 script = ExtResource("3_uou3m")
-number = ""
+base_text = "6"
 icon = ExtResource("6_cj8tw")
 
 [sub_resource type="Resource" id="Resource_lfwu7"]
 script = ExtResource("3_uou3m")
-number = ""
+base_text = "6"
 icon = ExtResource("6_cj8tw")
 
 [node name="s1_01_ai" type="Node"]

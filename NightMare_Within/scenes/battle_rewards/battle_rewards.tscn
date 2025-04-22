@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://dsssijys6yp40"]
 
 [ext_resource type="Script" path="res://scenes/battle_rewards/battle_rewards.gd" id="1_rytpd"]
-[ext_resource type="Texture2D" uid="uid://b887723gd87kf" path="res://art/background/scene1-v2.png" id="2_jhy7u"]
+[ext_resource type="Texture2D" uid="uid://ddpy8s84slta1" path="res://art/background/scene1-v1.png" id="2_664lj"]
 [ext_resource type="PackedScene" uid="uid://b6lq2p8m7yovh" path="res://scenes/ui/reward_button.tscn" id="3_uyao7"]
 [ext_resource type="Texture2D" uid="uid://dcsmhjeu4g3qo" path="res://art/ui/gold1.png" id="4_8rysx"]
 [ext_resource type="Texture2D" uid="uid://do8a6ce22ag0j" path="res://art/cards/CardDesignSmall.png" id="5_o6hov"]
@@ -25,7 +25,8 @@ script = ExtResource("1_rytpd")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("2_jhy7u")
+scale = Vector2(0.999779, 1.01143)
+texture = ExtResource("2_664lj")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
