@@ -15,5 +15,5 @@ cost = 2
 description = "对所有敌人造成10点伤害。"
 exhausts = false
 icon = ExtResource("1_0hmcg")
-tooltip_text = "[center]对所有敌人造成[color=\"ff0000\"]10[/color]点伤害.[/center]"
+tooltip_text = "[center]对所有敌人造成[color=\"ff0000\"]%s[/color]点伤害.[/center]"
 sound = ExtResource("3_anhve")

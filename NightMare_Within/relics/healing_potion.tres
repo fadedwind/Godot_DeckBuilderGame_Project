@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Relic" load_steps=3 format=3 uid="uid://dakqdndbmus3l"]
+
+[ext_resource type="Script" path="res://custom_resources/relic.gd" id="1_5p08x"]
+[ext_resource type="Texture2D" uid="uid://boklhiqs1414d" path="res://art/others/tile_0115.png" id="1_51bmq"]
+
+[resource]
+script = ExtResource("1_5p08x")
+relic_name = "治疗药水"
+id = "3"
+type = 3
+character_type = 2
+starter_relic = true
+icon = ExtResource("1_51bmq")
+tooltip = "[color=\"ffdf00\"]治疗药水[/color] 战斗结束时，回复6点生命。"

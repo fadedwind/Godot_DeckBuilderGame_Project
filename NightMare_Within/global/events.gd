@@ -24,12 +24,14 @@ signal enemy_died(enemy: Enemy)
 #battle-related events
 signal battle_over_screen_requested(text: String, type: BattleOverPanel.Type)
 signal battle_won 
+signal status_tooltip_requested(statuses: Array[Status])
 
 #Map-related events
 signal map_exited
 
 #Shop-related events
 signal shop_exited
+
 
 #Battle Reward-related events
 signal battle_reward_exited

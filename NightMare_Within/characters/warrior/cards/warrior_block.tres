@@ -13,6 +13,7 @@ rarity = 0
 target = 0
 cost = 1
 description = "获得5点格挡。"
+exhausts = false
 icon = ExtResource("1_kjamb")
-tooltip_text = "[center]获得[color=\"0044ff\"]5[/color]点格挡.[/center]"
+tooltip_text = "[center]获得[color=\"0044ff\"]%s[/color]点格挡.[/center]"
 sound = ExtResource("3_gb1p6")

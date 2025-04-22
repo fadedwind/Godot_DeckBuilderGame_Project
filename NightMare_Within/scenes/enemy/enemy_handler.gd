@@ -58,7 +58,6 @@ func _on_enemy_statuses_applied(type: Status.Type, enemy: Enemy) -> void:
 			acting_enemies.erase(enemy)
 			_start_next_enemy_turn()
 
-
 func _on_enemy_died(enemy: Enemy) -> void:
 	var is_enemy_turn := acting_enemies.size() > 0
 	acting_enemies.erase(enemy)

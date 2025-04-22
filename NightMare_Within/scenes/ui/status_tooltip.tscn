@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://4qi5do8lchn1"]
+
+[ext_resource type="Script" path="res://scenes/ui/status_tooltip.gd" id="1_4ypbi"]
+[ext_resource type="Texture2D" uid="uid://bkbq8fp05g52y" path="res://art/buffs/exposed.png" id="1_huvo7"]
+
+[node name="StatusTooltip" type="HBoxContainer"]
+custom_minimum_size = Vector2(400, 100)
+offset_right = 300.0
+offset_bottom = 100.0
+script = ExtResource("1_4ypbi")
+
+[node name="Icon" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("1_huvo7")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(450, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "易伤：受到的伤害增加50%%， 持续%s回合。"
+vertical_alignment = 1
+autowrap_mode = 2

@@ -13,4 +13,4 @@ can_expire = true
 duration = 1
 stacks = 0
 icon = ExtResource("1_5o5uw")
-tooltip = "TODO"
+tooltip = "易伤：受到的伤害增加50%%， 持续%s回合。"

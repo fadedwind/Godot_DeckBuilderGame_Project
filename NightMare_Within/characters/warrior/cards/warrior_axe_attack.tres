@@ -13,6 +13,7 @@ rarity = 1
 target = 1
 cost = 1
 description = "造成6点伤害。"
+exhausts = false
 icon = ExtResource("1_5uvmg")
-tooltip_text = "[center]造成[color=\"ff0000\"]6[/color]点伤害.[/center]"
+tooltip_text = "[center]造成[color=\"ff0000\"]%s[/color]点伤害.[/center]"
 sound = ExtResource("3_6dyxp")

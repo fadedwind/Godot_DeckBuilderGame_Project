@@ -57,6 +57,7 @@ status_owner = NodePath("..")
 [node name="DamageDealtModifier" parent="ModifierHandler" instance=ExtResource("7_c3o0r")]
 
 [node name="DamageTakenModifier" parent="ModifierHandler" instance=ExtResource("7_c3o0r")]
+type = 1
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

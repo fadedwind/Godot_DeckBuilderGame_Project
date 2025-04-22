@@ -48,8 +48,11 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(900, 200)
 layout_mode = 2
 mouse_filter = 2
+theme_override_font_sizes/bold_italics_font_size = 1
+theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
 text = "hello hello hello"
 fit_content = true
+tab_size = 6
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
