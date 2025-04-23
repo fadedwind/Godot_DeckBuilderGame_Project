@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cetw7apmahr80"]
+[gd_scene load_steps=10 format=3 uid="uid://cetw7apmahr80"]
 
 [ext_resource type="Script" path="res://scenes/run/run.gd" id="1_e1p5v"]
 [ext_resource type="PackedScene" uid="uid://c3yu334t3xc8b" path="res://scenes/map/map.tscn" id="2_57ypi"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dymhvp2gjafk7" path="res://scenes/ui/gold_ui.tscn" id="4_hlnf6"]
 [ext_resource type="PackedScene" uid="uid://d37k2skydt7cv" path="res://scenes/ui/card_pile_opener.tscn" id="4_jf60x"]
 [ext_resource type="PackedScene" uid="uid://bpvk4onpmeb0a" path="res://scenes/ui/card_pile_view.tscn" id="5_ek3mi"]
+[ext_resource type="PackedScene" uid="uid://bct72c3jgk2a3" path="res://scenes/relic_handler/relic_handler.tscn" id="8_a3b3n"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_pxpef"]
 font_color = Color(0.839546, 0.129036, 0.6188, 1)
@@ -117,3 +118,10 @@ horizontal_alignment = 1
 [node name="DeckView" parent="TopBar" instance=ExtResource("5_ek3mi")]
 unique_name_in_owner = true
 visible = false
+
+[node name="RelicHandler" type="CanvasLayer" parent="TopBar"]
+layer = 4
+
+[node name="RelicHandler" parent="TopBar/RelicHandler" instance=ExtResource("8_a3b3n")]
+offset_top = 80.0
+offset_bottom = 280.0
