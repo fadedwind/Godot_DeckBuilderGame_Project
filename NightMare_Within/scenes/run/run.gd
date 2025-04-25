@@ -15,6 +15,7 @@ const EVENT_SCENE := preload("res://scenes/event/eventwindow.tscn")
 @onready var current_view: Node = $CurrentView
 @onready var health_ui: HealthUI = %HealthUI
 @onready var gold_ui: GoldUI = %GoldUI
+@onready var relic_handler: RelicHandler = %RelicHandler
 @onready var deck_button: CardPileOpener = %DeckButton
 @onready var deck_view: CardPileView = %DeckView
 
@@ -43,6 +44,7 @@ func _start_run() -> void:
 	stats = RunStats.new()
 	_setup_event_connections()
 	_setup_top_bar()
+	_setup_relic_handler()
 	
 	map.generate_new_map()
 	map.unlock_floor(0)
@@ -84,9 +86,13 @@ func _setup_top_bar():
 	character.stats_changed.connect(health_ui.update_stats.bind(character))
 	health_ui.update_stats(character)
 	gold_ui.run_stats = stats
+	
 	deck_button.card_pile = character.deck
 	deck_view.card_pile = character.deck
 	deck_button.pressed.connect(deck_view.show_current_view.bind("Deck"))
+
+func _setup_relic_handler():
+	relic_handler.add_relic(character.starting_relic)
 
 func _on_battle_room_entered(room: Room) -> void:
 	var battle_scene: Battle = _change_view(BATTLE_SCENE) as Battle

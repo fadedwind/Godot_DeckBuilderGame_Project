@@ -123,5 +123,6 @@ visible = false
 layer = 4
 
 [node name="RelicHandler" parent="TopBar/RelicHandler" instance=ExtResource("8_a3b3n")]
+unique_name_in_owner = true
 offset_top = 80.0
 offset_bottom = 280.0

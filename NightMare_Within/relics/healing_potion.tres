@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_5p08x")
 relic_name = "治疗药水"
-id = "3"
+id = "003"
 type = 3
 character_type = 2
 starter_relic = true

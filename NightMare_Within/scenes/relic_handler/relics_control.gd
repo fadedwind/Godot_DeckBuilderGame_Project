@@ -28,7 +28,6 @@ func _ready() -> void:
 
 	relics.child_order_changed.connect(_on_relics_child_order_changed)
 
-
 func update() -> void:
 	if not is_instance_valid(left_button) or not is_instance_valid(right_button):
 		return

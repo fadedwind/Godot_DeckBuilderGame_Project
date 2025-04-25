@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://bct72c3jgk2a3"]
+[gd_scene load_steps=10 format=3 uid="uid://bct72c3jgk2a3"]
 
 [ext_resource type="Texture2D" uid="uid://c4b8vn68t8buw" path="res://art/ui/arrowleft.png" id="1_6rj7w"]
 [ext_resource type="PackedScene" uid="uid://4ngewrc2nm51" path="res://scenes/relic_handler/relic_ui.tscn" id="1_cbdod"]
 [ext_resource type="Script" path="res://scenes/relic_handler/relic_handler.gd" id="1_rx3dk"]
 [ext_resource type="Script" path="res://scenes/relic_handler/relics_control.gd" id="2_0l46x"]
 [ext_resource type="Texture2D" uid="uid://d2cwtfoq1juua" path="res://art/ui/arrowright.png" id="3_8sxd8"]
+[ext_resource type="Resource" uid="uid://mtaq4qw2k4j1" path="res://relics/explosive_barrel.tres" id="5_3xjac"]
+[ext_resource type="Resource" uid="uid://dakqdndbmus3l" path="res://relics/healing_potion.tres" id="6_yh1nl"]
+[ext_resource type="Resource" uid="uid://cicgu78vvnoas" path="res://relics/mana_potion.tres" id="7_5k1kd"]
+[ext_resource type="Resource" uid="uid://bsjc541gdu08p" path="res://relics/reinforced_armor.tres" id="8_40ekm"]
 
 [node name="RelicHandler" type="HBoxContainer"]
 offset_right = 2368.0
@@ -40,54 +44,67 @@ theme_override_constants/separation = 2
 [node name="RelicUI" parent="RelicsControl/Relics" instance=ExtResource("1_cbdod")]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
+relic = ExtResource("5_3xjac")
 
 [node name="RelicUI2" parent="RelicsControl/Relics" instance=ExtResource("1_cbdod")]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
+relic = ExtResource("5_3xjac")
 
 [node name="RelicUI3" parent="RelicsControl/Relics" instance=ExtResource("1_cbdod")]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
+relic = ExtResource("6_yh1nl")
 
 [node name="RelicUI4" parent="RelicsControl/Relics" instance=ExtResource("1_cbdod")]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
+relic = ExtResource("7_5k1kd")
 
 [node name="RelicUI5" parent="RelicsControl/Relics" instance=ExtResource("1_cbdod")]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
+relic = ExtResource("6_yh1nl")
 
 [node name="RelicUI6" parent="RelicsControl/Relics" instance=ExtResource("1_cbdod")]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
+relic = ExtResource("6_yh1nl")
 
 [node name="RelicUI7" parent="RelicsControl/Relics" instance=ExtResource("1_cbdod")]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
+relic = ExtResource("6_yh1nl")
 
 [node name="RelicUI8" parent="RelicsControl/Relics" instance=ExtResource("1_cbdod")]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
+relic = ExtResource("6_yh1nl")
 
 [node name="RelicUI9" parent="RelicsControl/Relics" instance=ExtResource("1_cbdod")]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
+relic = ExtResource("6_yh1nl")
 
 [node name="RelicUI10" parent="RelicsControl/Relics" instance=ExtResource("1_cbdod")]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
+relic = ExtResource("6_yh1nl")
 
 [node name="RelicUI11" parent="RelicsControl/Relics" instance=ExtResource("1_cbdod")]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
+relic = ExtResource("8_40ekm")
 
 [node name="RelicUI12" parent="RelicsControl/Relics" instance=ExtResource("1_cbdod")]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
+relic = ExtResource("7_5k1kd")
 
 [node name="RelicUI13" parent="RelicsControl/Relics" instance=ExtResource("1_cbdod")]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
+relic = ExtResource("6_yh1nl")
 
 [node name="RightButton" type="TextureButton" parent="."]
 unique_name_in_owner = true
