@@ -112,7 +112,6 @@ func _on_battle_won() -> void:
 	reward_scene.add_gold_reward(map.last_room.battle_stats.roll_gold_reward())
 	reward_scene.add_card_reward()
 	
-	
 func _on_map_exited(room: Room) -> void:
 
 	match room.type:
