@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://4ngewrc2nm51"]
+[gd_scene load_steps=8 format=3 uid="uid://4ngewrc2nm51"]
 
 [ext_resource type="Script" path="res://scenes/relic_handler/relic_ui.gd" id="1_vb58x"]
+[ext_resource type="Resource" uid="uid://dakqdndbmus3l" path="res://relics/healing_potion.tres" id="2_dubxr"]
 [ext_resource type="Texture2D" uid="uid://bkajvxjfgc1jg" path="res://art/relic/explosive_barrel.png" id="2_nsfkh"]
 [ext_resource type="Material" uid="uid://d30aqi80c1nrc" path="res://art/white_sprite_material.tres" id="3_dfs65"]
 
@@ -77,6 +78,7 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(100, 100)
 script = ExtResource("1_vb58x")
+relic = ExtResource("2_dubxr")
 
 [node name="Icon" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(160, 160)

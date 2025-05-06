@@ -44,7 +44,7 @@ theme_override_constants/separation = 2
 [node name="RelicUI" parent="RelicsControl/Relics" instance=ExtResource("1_cbdod")]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
-relic = ExtResource("5_3xjac")
+relic = ExtResource("6_yh1nl")
 
 [node name="RelicUI2" parent="RelicsControl/Relics" instance=ExtResource("1_cbdod")]
 custom_minimum_size = Vector2(200, 200)
