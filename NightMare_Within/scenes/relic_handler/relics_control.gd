@@ -18,15 +18,11 @@ var relics_position: float
 
 
 func _ready() -> void:
-	relics_position = relics.position.x
-	
 	left_button.pressed.connect(_on_left_button_pressed)
 	right_button.pressed.connect(_on_right_button_pressed)
 
-	for relic_ui: RelicUI in relics.get_children():
-		relic_ui.free()
-
 	relics.child_order_changed.connect(_on_relics_child_order_changed)
+	_on_relics_child_order_changed()
 
 func update() -> void:
 	if not is_instance_valid(left_button) or not is_instance_valid(right_button):
@@ -52,16 +48,14 @@ func _on_left_button_pressed() -> void:
 	if current_page > 1:
 		current_page -= 1
 		update()
-		relics_position += page_width
-		_tween_to(relics_position)
+		_tween_to(relics.position.x + page_width)
 
 
 func _on_right_button_pressed() -> void:
 	if current_page < max_page:
 		current_page += 1
 		update()
-		relics_position -= page_width
-		_tween_to(relics_position)
+		_tween_to(relics.position.x - page_width)
 
 
 func _on_relics_child_order_changed() -> void:
