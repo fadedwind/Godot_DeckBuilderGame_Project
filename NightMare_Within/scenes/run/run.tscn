@@ -87,7 +87,7 @@ layout_mode = 2
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="PlaceHolder" type="Control" parent="TopBar/BarItems"]
+[node name="PlaceHolder" type="CenterContainer" parent="TopBar/BarItems"]
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -119,10 +119,7 @@ horizontal_alignment = 1
 unique_name_in_owner = true
 visible = false
 
-[node name="RelicHandler" type="CanvasLayer" parent="TopBar"]
-layer = 4
-
-[node name="RelicHandler" parent="TopBar/RelicHandler" instance=ExtResource("8_a3b3n")]
+[node name="RelicHandler" parent="TopBar" instance=ExtResource("8_a3b3n")]
 unique_name_in_owner = true
 offset_top = 80.0
 offset_bottom = 280.0

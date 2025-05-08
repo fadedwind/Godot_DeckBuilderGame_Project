@@ -4,6 +4,7 @@ extends Node
 const HAND_DRAW_INTERVAL := 0.20
 const HAND_DISCARD_INTERVAL := 0.20
 
+@export var relics: RelicHandler
 @export var player: Player
 @export var hand: Hand
 
@@ -26,6 +27,7 @@ func start_battle(char_stats: CharacterStats) -> void:
 	character.draw_pile = character.deck.duplicate(true)
 	character.draw_pile.shuffle()
 	character.discard = CardPile.new()
+	relics.relics_activated.connect(_on_relics_activated)
 	player.status_handler.statuses_applied.connect(_on_statuses_applied)
 	start_turn()
 	
@@ -81,6 +83,7 @@ func reshuffle_deck_from_discard() -> void:
 func _on_card_played(card: Card) -> void:
 	if card.exhausts or card.type == Card.Type.POWER:
 		return
+		
 	character.discard.add_card(card)
 	
 func _on_statuses_applied(type: Status.Type) -> void:
@@ -90,3 +93,10 @@ func _on_statuses_applied(type: Status.Type) -> void:
 		Status.Type.END_OF_TURN:
 			discard_cards()
 	
+
+func _on_relics_activated(type: Relic.Type) -> void:
+	match type:
+		Relic.Type.START_OF_TURN:
+			player.status_handler.apply_statuses_by_type(Status.Type.START_OF_TURN)
+		Relic.Type.END_OF_TURN:
+			player.status_handler.apply_statuses_by_type(Status.Type.END_OF_TURN)

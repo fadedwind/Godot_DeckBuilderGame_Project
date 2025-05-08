@@ -20,7 +20,6 @@ func _ready() -> void:
 	take_button.pressed.connect(
 		func(): 
 			card_reward_selected.emit(selected_card)
-			print("drafted %s" % selected_card.id)
 			queue_free()
 	)
 	

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Relic" load_steps=2 format=3 uid="uid://diym0g88srmpn"]
+
+[ext_resource type="Script" path="res://custom_resources/relic.gd" id="1_qf2ux"]
+
+[resource]
+script = ExtResource("1_qf2ux")
+relic_name = ""
+id = ""
+type = 0
+character_type = 0
+starting_relic = false
+tooltip = ""

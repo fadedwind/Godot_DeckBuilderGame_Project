@@ -25,11 +25,9 @@ func start_battle() -> void:
 	
 	battle_ui.char_stats = char_stats
 	player.stats = char_stats
-	player_handler.start_battle(char_stats)
 	enemy_handler.setup_enemies(battle_stats)
 	enemy_handler.reset_enemy_actions()
 
-	battle_ui.initialize_card_pile_ui()
 	relics.relics_activated.connect(_on_relics_activated)
 	relics.activate_relics_by_type(Relic.Type.START_OF_COMBAT)
 

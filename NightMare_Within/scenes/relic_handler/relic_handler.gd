@@ -12,10 +12,6 @@ const RELIC_UI = preload("res://scenes/relic_handler/relic_ui.tscn")
 
 func _ready() -> void:
 	relics.child_exiting_tree.connect(_on_relics_child_exiting_tree)
-	add_relic(preload("res://relics/explosive_barrel.tres"))
-	await get_tree().create_timer(2.0)
-	add_relic(preload("res://relics/explosive_barrel.tres"))
-	await get_tree().create_timer(2.0)
 	
 func activate_relics_by_type(type: Relic.Type) -> void:
 	if type == Relic.Type.EVENT_BASED:
@@ -39,13 +35,20 @@ func activate_relics_by_type(type: Relic.Type) -> void:
 
 func add_relics(relics_array: Array[Relic]) -> void:
 	for relic: Relic in relics_array:
+		print("add_relics relic:", relic)
 		add_relic(relic)
 
-
 func add_relic(relic: Relic) -> void:
-	if has_relic(relic.id):
-		return
+	print(">>> add_relic called, relic:", relic)
 	
+	if relic == null:
+		print("relic is null!")
+		return
+	if has_relic(relic.id):
+		print("Already has relic:", relic.id)
+		return
+		
+	print("Adding relic:", relic.id)
 	var new_relic_ui := RELIC_UI.instantiate() as RelicUI
 	relics.add_child(new_relic_ui)
 	new_relic_ui.relic = relic
