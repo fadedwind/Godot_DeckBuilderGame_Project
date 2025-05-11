@@ -16,7 +16,7 @@ const EVENT_SCENE := preload("res://scenes/event/eventwindow.tscn")
 @onready var health_ui: HealthUI = %HealthUI
 @onready var gold_ui: GoldUI = %GoldUI
 @onready var relic_handler: RelicHandler = %RelicHandler
-
+@onready var relic_tooltip: RelicTooltip = %RelicTooltip
 @onready var deck_button: CardPileOpener = %DeckButton
 @onready var deck_view: CardPileView = %DeckView
 
@@ -28,7 +28,7 @@ const EVENT_SCENE := preload("res://scenes/event/eventwindow.tscn")
 @onready var treasure_button: Button = %TreasureButton
 
 var stats: RunStats
-var character: CharacterStats
+var character: CharacterStats 
 
 func _ready() -> void:
 	if not run_startup:
@@ -73,7 +73,7 @@ func _setup_event_connections() -> void:
 	Events.restsite_exited.connect(_show_map)
 	Events.map_exited.connect(_on_map_exited)
 	Events.shop_exited.connect(_show_map)
-	Events.treasure_room_exited.connect(_show_map)
+	Events.treasure_room_exited.connect(_on_treasure_room_exited)
 	
 	battle_button.pressed.connect(_change_view.bind(BATTLE_SCENE))
 	restsite_button.pressed.connect(_change_view.bind(RESTSITE_SCENE))
@@ -87,6 +87,7 @@ func _setup_top_bar():
 	health_ui.update_stats(character)
 	gold_ui.run_stats = stats
 	relic_handler.add_relic(character.starting_relic)
+	Events.relic_tooltip_requested.connect(relic_tooltip.show_tooltip)
 	deck_button.card_pile = character.deck
 	deck_view.card_pile = character.deck
 	deck_button.pressed.connect(deck_view.show_current_view.bind("Deck"))
@@ -98,10 +99,34 @@ func _on_battle_room_entered(room: Room) -> void:
 	battle_scene.relics = relic_handler
 	battle_scene.start_battle()
 
+func _on_treasure_room_entered() -> void:
+	var treasure_scene := _change_view(TREASURE_SCENE) as Treasure
+	treasure_scene.relic_handler = relic_handler
+	treasure_scene.char_stats = character
+	treasure_scene.generate_relic()
+
+
+func _on_treasure_room_exited(relic: Relic) -> void:
+	var reward_scene := _change_view(BATTLE_REWARD_SCENE) as BattleReward
+	reward_scene.run_stats = stats
+	reward_scene.character_stats = character
+	reward_scene.relic_handler = relic_handler
+	
+	reward_scene.add_relic_reward(relic)
+
 func _on_restsite_entered() -> void:
 	var restsite := _change_view(RESTSITE_SCENE) as Restsite
 	restsite.char_stats = character
 	
+
+func _on_shop_entered() -> void:
+	var shop := _change_view(SHOP_SCENE) as Shop
+	shop.char_stats = character
+	shop.run_stats = stats
+	shop.relic_handler = relic_handler
+	Events.shop_entered.emit(shop)
+	shop.populate_shop()
+
 func _on_battle_won() -> void:
 	var reward_scene := _change_view(BATTLE_REWARD_SCENE) as BattleReward
 	reward_scene.run_stats = stats
@@ -116,11 +141,11 @@ func _on_map_exited(room: Room) -> void:
 		Room.Type.MONSTER:
 			_on_battle_room_entered(room)
 		Room.Type.TREASURE:
-			_change_view(TREASURE_SCENE)
+			_on_treasure_room_entered()
 		Room.Type.CAMPFIRE:
 			_on_restsite_entered()
 		Room.Type.SHOP:
-			_change_view(SHOP_SCENE)
+			_on_shop_entered()
 		Room.Type.BOSS:
 			_on_battle_room_entered(room)
 		Room.Type.EVENT:

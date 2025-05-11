@@ -1,11 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://cfw7gyeo38d1d"]
+[gd_scene load_steps=5 format=3 uid="uid://cfw7gyeo38d1d"]
 
 [ext_resource type="Script" path="res://scenes/restsite/restsite.gd" id="1_dnaq6"]
 [ext_resource type="Texture2D" uid="uid://bbj8ntjkj71hd" path="res://art/background/restsite1.png" id="2_8ychj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_wkbiq"]
-font_size = 40
+font_size = 50
 font_color = Color(0.647367, 0.647215, 1, 1)
+
+[sub_resource type="Theme" id="Theme_jav32"]
 
 [node name="restsite" type="Control"]
 layout_mode = 3
@@ -35,9 +37,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -230.0
-offset_top = -156.5
+offset_top = -180.0
 offset_right = 230.0
-offset_bottom = 143.5
+offset_bottom = 120.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 10
@@ -51,6 +53,7 @@ horizontal_alignment = 1
 [node name="RestButton" type="Button" parent="UILayer/UI"]
 layout_mode = 2
 size_flags_horizontal = 4
+theme = SubResource("Theme_jav32")
 text = "睡觉"
 
 [node name="Description" type="Label" parent="UILayer/UI"]

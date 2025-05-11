@@ -1,8 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://ddycuypccqjrv"]
+[gd_scene load_steps=9 format=3 uid="uid://ddycuypccqjrv"]
 
 [ext_resource type="Script" path="res://scenes/treasure/treasure.gd" id="1_qx0dd"]
+[ext_resource type="Texture2D" uid="uid://b887723gd87kf" path="res://art/background/scene1-v2.png" id="2_bdvf5"]
+[ext_resource type="Script" path="res://custom_resources/relic.gd" id="2_beuyg"]
+[ext_resource type="Texture2D" uid="uid://dt5u5tv8euxfl" path="res://art/ui/chest/chest.png" id="3_y1esm"]
+[ext_resource type="Resource" uid="uid://mtaq4qw2k4j1" path="res://relics/explosive_barrel.tres" id="3_y50do"]
+[ext_resource type="Resource" uid="uid://cicgu78vvnoas" path="res://relics/mana_potion.tres" id="4_rjju8"]
+[ext_resource type="Resource" uid="uid://bsjc541gdu08p" path="res://relics/reinforced_armor.tres" id="5_blcoh"]
 
-[node name="treasure" type="Control"]
+[sub_resource type="LabelSettings" id="LabelSettings_c5gya"]
+font_size = 70
+font_color = Color(0.912091, 0.827583, 0.177623, 1)
+shadow_size = 0
+
+[node name="Treasure" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -10,36 +21,47 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qx0dd")
+treasure_relic_pool = Array[ExtResource("2_beuyg")]([ExtResource("3_y50do"), ExtResource("4_rjju8"), ExtResource("5_blcoh")])
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
+[node name="backgroundLayer" type="CanvasLayer" parent="."]
+layer = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
+[node name="Sprite2D" type="Sprite2D" parent="backgroundLayer"]
+position = Vector2(197, 844)
+scale = Vector2(1.00628, 1.01191)
+texture = ExtResource("2_bdvf5")
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+
+[node name="UI" type="VBoxContainer" parent="UILayer"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -34.0
-offset_top = -29.0
-offset_right = 34.0
-offset_bottom = 29.0
+offset_left = -400.0
+offset_top = -235.0
+offset_right = 400.0
+offset_bottom = 165.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 10
 
-[node name="Label" type="Label" parent="VBoxContainer"]
+[node name="Title" type="Label" parent="UILayer/UI"]
 layout_mode = 2
-text = "treasure"
+text = "宝箱！"
+label_settings = SubResource("LabelSettings_c5gya")
+horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "go back"
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_left = 1344.0
+offset_top = 961.0
+offset_right = 1844.0
+offset_bottom = 1461.0
+mouse_filter = 0
+texture = ExtResource("3_y1esm")
+stretch_mode = 5
+
+[connection signal="gui_input" from="CanvasLayer/TextureRect" to="." method="_on_texture_rect_gui_input"]

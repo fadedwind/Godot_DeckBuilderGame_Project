@@ -12,6 +12,8 @@ const RELIC_UI = preload("res://scenes/relic_handler/relic_ui.tscn")
 
 func _ready() -> void:
 	relics.child_exiting_tree.connect(_on_relics_child_exiting_tree)
+	add_relic(preload("res://relics/explosive_barrel.tres"))
+	
 	
 func activate_relics_by_type(type: Relic.Type) -> void:
 	if type == Relic.Type.EVENT_BASED:

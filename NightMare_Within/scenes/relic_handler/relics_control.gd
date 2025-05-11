@@ -18,13 +18,12 @@ var relics_position: float
 
 
 func _ready() -> void:
-	relics_position = relics.position.x
 	
 	left_button.pressed.connect(_on_left_button_pressed)
 	right_button.pressed.connect(_on_right_button_pressed)
 
 	for relic_ui: RelicUI in relics.get_children():
-		relic_ui.queue_free()
+		relic_ui.free()
 
 	relics.child_order_changed.connect(_on_relics_child_order_changed)
 

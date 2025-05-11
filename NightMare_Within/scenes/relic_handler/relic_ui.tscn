@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bkajvxjfgc1jg" path="res://art/relic/explosive_barrel.png" id="2_nsfkh"]
 [ext_resource type="Material" uid="uid://d30aqi80c1nrc" path="res://art/white_sprite_material.tres" id="3_dfs65"]
 
-[sub_resource type="Animation" id="Animation_5hbgw"]
+[sub_resource type="Animation" id="Animation_47ejd"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -32,7 +32,7 @@ tracks/1/keys = {
 "values": [null]
 }
 
-[sub_resource type="Animation" id="Animation_e0cgf"]
+[sub_resource type="Animation" id="Animation_okh8g"]
 resource_name = "flash"
 length = 0.3
 step = 0.15
@@ -46,7 +46,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.15, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(1, 1), Vector2(1.3, 1.3), Vector2(1, 1)]
+"values": [Vector2(1, 1), Vector2(1.2, 1.2), Vector2(1, 1)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -61,22 +61,17 @@ tracks/1/keys = {
 "values": [null, ExtResource("3_dfs65"), null]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_4aiix"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bqcys"]
 _data = {
-"RESET": SubResource("Animation_5hbgw"),
-"flash": SubResource("Animation_e0cgf")
+"RESET": SubResource("Animation_47ejd"),
+"flash": SubResource("Animation_okh8g")
 }
 
 [node name="RelicUI" type="Control"]
+custom_minimum_size = Vector2(180, 180)
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -2188.0
-offset_bottom = -1488.0
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(100, 100)
+anchors_preset = 0
+pivot_offset = Vector2(90, 90)
 script = ExtResource("1_vb58x")
 relic = ExtResource("2_dubxr")
 
@@ -101,7 +96,7 @@ stretch_mode = 5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_4aiix")
+"": SubResource("AnimationLibrary_bqcys")
 }
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]

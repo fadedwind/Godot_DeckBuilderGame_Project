@@ -1,22 +1,21 @@
-[gd_scene load_steps=8 format=3 uid="uid://bct72c3jgk2a3"]
+[gd_scene load_steps=6 format=3 uid="uid://bct72c3jgk2a3"]
 
 [ext_resource type="Texture2D" uid="uid://c4b8vn68t8buw" path="res://art/ui/arrowleft.png" id="1_6rj7w"]
 [ext_resource type="PackedScene" uid="uid://4ngewrc2nm51" path="res://scenes/relic_handler/relic_ui.tscn" id="1_cbdod"]
 [ext_resource type="Script" path="res://scenes/relic_handler/relic_handler.gd" id="1_rx3dk"]
 [ext_resource type="Script" path="res://scenes/relic_handler/relics_control.gd" id="2_0l46x"]
 [ext_resource type="Texture2D" uid="uid://d2cwtfoq1juua" path="res://art/ui/arrowright.png" id="3_8sxd8"]
-[ext_resource type="Resource" uid="uid://cicgu78vvnoas" path="res://relics/mana_potion.tres" id="7_5k1kd"]
-[ext_resource type="Resource" uid="uid://bsjc541gdu08p" path="res://relics/reinforced_armor.tres" id="8_40ekm"]
 
 [node name="RelicHandler" type="HBoxContainer"]
 offset_right = 2368.0
-offset_bottom = 200.0
+offset_bottom = 180.0
 script = ExtResource("1_rx3dk")
 
 [node name="LeftButton" type="TextureButton" parent="."]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(80, 200)
+custom_minimum_size = Vector2(80, 180)
 layout_mode = 2
+disabled = true
 texture_normal = ExtResource("1_6rj7w")
 texture_pressed = ExtResource("1_6rj7w")
 texture_hover = ExtResource("1_6rj7w")
@@ -25,7 +24,7 @@ stretch_mode = 5
 
 [node name="RelicsControl" type="Control" parent="." node_paths=PackedStringArray("left_button", "right_button")]
 clip_contents = true
-custom_minimum_size = Vector2(2200, 200)
+custom_minimum_size = Vector2(2200, 180)
 layout_mode = 2
 script = ExtResource("2_0l46x")
 left_button = NodePath("../LeftButton")
@@ -33,69 +32,46 @@ right_button = NodePath("../RightButton")
 
 [node name="Relics" type="HBoxContainer" parent="RelicsControl"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(2000, 200)
 layout_mode = 0
-offset_right = 2648.0
-offset_bottom = 200.0
-theme_override_constants/separation = 2
+offset_right = 2000.0
+offset_bottom = 180.0
 
 [node name="RelicUI" parent="RelicsControl/Relics" instance=ExtResource("1_cbdod")]
-custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 
 [node name="RelicUI2" parent="RelicsControl/Relics" instance=ExtResource("1_cbdod")]
-custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 
 [node name="RelicUI3" parent="RelicsControl/Relics" instance=ExtResource("1_cbdod")]
-custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 
 [node name="RelicUI4" parent="RelicsControl/Relics" instance=ExtResource("1_cbdod")]
-custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 
 [node name="RelicUI5" parent="RelicsControl/Relics" instance=ExtResource("1_cbdod")]
-custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 
 [node name="RelicUI6" parent="RelicsControl/Relics" instance=ExtResource("1_cbdod")]
-custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 
 [node name="RelicUI7" parent="RelicsControl/Relics" instance=ExtResource("1_cbdod")]
-custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 
 [node name="RelicUI8" parent="RelicsControl/Relics" instance=ExtResource("1_cbdod")]
-custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 
 [node name="RelicUI9" parent="RelicsControl/Relics" instance=ExtResource("1_cbdod")]
-custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 
 [node name="RelicUI10" parent="RelicsControl/Relics" instance=ExtResource("1_cbdod")]
-custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 
 [node name="RelicUI11" parent="RelicsControl/Relics" instance=ExtResource("1_cbdod")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-relic = ExtResource("8_40ekm")
-
-[node name="RelicUI12" parent="RelicsControl/Relics" instance=ExtResource("1_cbdod")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-relic = ExtResource("7_5k1kd")
-
-[node name="RelicUI13" parent="RelicsControl/Relics" instance=ExtResource("1_cbdod")]
-custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 
 [node name="RightButton" type="TextureButton" parent="."]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(80, 0)
+custom_minimum_size = Vector2(80, 180)
 layout_mode = 2
 texture_normal = ExtResource("3_8sxd8")
 texture_pressed = ExtResource("3_8sxd8")

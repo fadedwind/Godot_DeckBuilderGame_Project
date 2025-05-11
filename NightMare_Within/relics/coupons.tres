@@ -1,12 +1,15 @@
-[gd_resource type="Resource" script_class="Relic" load_steps=2 format=3 uid="uid://n0yner6sditl"]
+[gd_resource type="Resource" script_class="CouponsRelic" load_steps=3 format=3 uid="uid://n0yner6sditl"]
 
-[ext_resource type="Script" path="res://custom_resources/relic.gd" id="1_g3gbm"]
+[ext_resource type="Script" path="res://relics/coupons.gd" id="1_hbqdy"]
+[ext_resource type="Texture2D" uid="uid://dg011k74ugl6c" path="res://art/relic/coupon.png" id="1_n3kfo"]
 
 [resource]
-script = ExtResource("1_g3gbm")
+script = ExtResource("1_hbqdy")
+discount = 50
 relic_name = "优惠劵"
 id = "001"
 type = 4
 character_type = 0
-starter_relic = false
+starting_relic = false
+icon = ExtResource("1_n3kfo")
 tooltip = "[color=\"ffdf00\"]优惠券[/color] 商店中的物品五折。"

@@ -1,14 +1,15 @@
-[gd_resource type="Resource" script_class="Relic" load_steps=3 format=3 uid="uid://bsjc541gdu08p"]
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://bsjc541gdu08p"]
 
 [ext_resource type="Texture2D" uid="uid://dytq0eumwvky6" path="res://art/others/tile_0074.png" id="1_noioy"]
-[ext_resource type="Script" path="res://custom_resources/relic.gd" id="1_tb5a1"]
+[ext_resource type="Script" path="res://relics/reinforced_armor.gd" id="2_n052k"]
 
 [resource]
-script = ExtResource("1_tb5a1")
+script = ExtResource("2_n052k")
+block_bonus = 3
 relic_name = "硬质护甲"
 id = "005"
 type = 2
 character_type = 0
-starter_relic = false
+starting_relic = false
 icon = ExtResource("1_noioy")
 tooltip = "[color=\"ffdf00\"]硬质护甲[/color] 回合结束时，获得3点格挡。"

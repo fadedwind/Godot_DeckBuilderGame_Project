@@ -10,6 +10,7 @@ const CARD_TEXT := "Add New Card"
 
 @export var run_stats: RunStats
 @export var character_stats: CharacterStats
+@export var relic_handler: RelicHandler
 
 @onready var rewards: VBoxContainer = %Rewards
 
@@ -30,6 +31,18 @@ func add_gold_reward(amount: int) -> void:
 	gold_reward.reward_text = GOLD_TEXT % amount
 	gold_reward.pressed.connect(_on_gold_reward_taken.bind(amount))
 	rewards.add_child.call_deferred(gold_reward)
+
+func add_relic_reward(relic: Relic) -> void:
+	if not relic:
+		return
+
+	var relic_reward := REWARD_BUTTON.instantiate() as RewardButton
+	relic_reward.reward_icon = relic.icon
+	relic_reward.reward_text = relic.relic_name
+	relic_reward.pressed.connect(_on_relic_reward_taken.bind(relic))
+	rewards.add_child.call_deferred(relic_reward)
+
+
 
 func add_card_reward() -> void:
 	var card_reward := REWARD_BUTTON.instantiate() as RewardButton
@@ -94,6 +107,12 @@ func _on_card_reward_taken(card: Card) -> void:
 	print("Deck Brfore: \n %s \n" % character_stats.deck)	
 	character_stats.deck.add_card(card)
 	print("Deck After: \n %s \n" % character_stats.deck)	
+	
+func _on_relic_reward_taken(relic: Relic) -> void:
+	if not relic or not relic_handler:
+		return
+		
+	relic_handler.add_relic(relic)
 	
 func _on_back_button_pressed() -> void:
 	Events.battle_reward_exited.emit()
