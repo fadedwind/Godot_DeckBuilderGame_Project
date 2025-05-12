@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="EnemyStats" load_steps=3 format=3 uid="uid://db7ek51b3bi1t"]
-
-[ext_resource type="Script" path="res://custom_resources/enemy_stats.gd" id="1_bcx7l"]
-[ext_resource type="Texture2D" uid="uid://d3py3y2r8haw3" path="res://art/enemy/boss/ghost.png" id="1_s8pr2"]
-
-[resource]
-script = ExtResource("1_bcx7l")
-max_health = 160
-art = ExtResource("1_s8pr2")

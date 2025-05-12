@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" path="res://scenes/enemy/enemy_action_picker.gd" id="1_3j5mg"]
 [ext_resource type="Script" path="res://enemies/s1_02/s1_02_attack_action.gd" id="2_825o8"]
-[ext_resource type="Texture2D" uid="uid://bfvi02kojsa00" path="res://art/ui/tile_0103.png" id="3_htrxg"]
+[ext_resource type="Texture2D" uid="uid://bfvi02kojsa00" path="res://art/ui/intent/attack1-5.png" id="3_htrxg"]
 [ext_resource type="Script" path="res://enemies/s1_02/flower_block_action.gd" id="3_o1b7n"]
 [ext_resource type="Script" path="res://custom_resources/intent.gd" id="4_s854i"]
 [ext_resource type="AudioStream" uid="uid://de2ryat1pxq6" path="res://art/audio/enemy_attack.ogg" id="5_eyrdc"]
-[ext_resource type="Texture2D" uid="uid://oe7v35ii8vrs" path="res://art/ui/tile_0102.png" id="7_21415"]
+[ext_resource type="Texture2D" uid="uid://oe7v35ii8vrs" path="res://art/ui/intent/block.png" id="7_21415"]
 [ext_resource type="AudioStream" uid="uid://k8m4o3hlwm7l" path="res://art/audio/enemy_block.ogg" id="8_6ylby"]
 
 [sub_resource type="Resource" id="Resource_ip3wc"]

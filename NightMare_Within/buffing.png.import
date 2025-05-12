@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqcal03735mv8"
-path="res://.godot/imported/tile_0118.png-97295ac86a079aec38ff75265d28d73a.ctex"
+uid="uid://cmaux52pckmfb"
+path="res://.godot/imported/buffing.png-4e36372f4be86373d9958e04f36b726f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/ui/tile_0118.png"
-dest_files=["res://.godot/imported/tile_0118.png-97295ac86a079aec38ff75265d28d73a.ctex"]
+source_file="res://buffing.png"
+dest_files=["res://.godot/imported/buffing.png-4e36372f4be86373d9958e04f36b726f.ctex"]
 
 [params]
 

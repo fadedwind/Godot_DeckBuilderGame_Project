@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Card" load_steps=3 format=3 uid="uid://cy0rg7hsy7r0j"]
+
+[ext_resource type="Script" path="res://custom_resources/card.gd" id="1_3ugpa"]
+[ext_resource type="Texture2D" uid="uid://cce5ywgxels75" path="res://art/cards/common/status/toxic.png" id="1_emvqv"]
+
+[resource]
+script = ExtResource("1_3ugpa")
+id = 800
+Cardname = ""
+type = 3
+rarity = 1
+target = 0
+cost = 1
+description = ""
+exhausts = true
+icon = ExtResource("1_emvqv")
+tooltip_text = "消耗。"

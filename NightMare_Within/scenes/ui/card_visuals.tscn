@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://qp4y08nikdju" path="res://art/cards/CardDesign2.png" id="2_4ijvf"]
 [ext_resource type="Resource" uid="uid://bafwh55iag38v" path="res://characters/Warrior/cards/warrior_slash.tres" id="2_le2nq"]
 [ext_resource type="LabelSettings" uid="uid://d2pg2i8yqkkp7" path="res://scenes/ui/text_label_settings.tres" id="3_vxvmf"]
-[ext_resource type="Texture2D" uid="uid://bfvi02kojsa00" path="res://art/ui/tile_0103.png" id="4_teyov"]
+[ext_resource type="Texture2D" uid="uid://bfvi02kojsa00" path="res://art/ui/intent/attack1-5.png" id="4_teyov"]
 [ext_resource type="Texture2D" uid="uid://cqqirgawswiy" path="res://art/cards/rarity1.png" id="5_7kymr"]
 
 

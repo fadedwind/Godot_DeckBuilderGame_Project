@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dojlh80rte165"
-path="res://.godot/imported/tile_0107.png-979b6610fa8a551ab9282af106676931.ctex"
+uid="uid://cce5ywgxels75"
+path="res://.godot/imported/toxic.png-b1fcfb5f55f4f34541be75814be29b3e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/ui/tile_0107.png"
-dest_files=["res://.godot/imported/tile_0107.png-979b6610fa8a551ab9282af106676931.ctex"]
+source_file="res://art/cards/common/status/toxic.png"
+dest_files=["res://.godot/imported/toxic.png-b1fcfb5f55f4f34541be75814be29b3e.ctex"]
 
 [params]
 

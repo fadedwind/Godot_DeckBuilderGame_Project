@@ -1,7 +1,7 @@
 class_name Card
 extends Resource
 
-enum Type {ATTACK, SKILL, POWER}
+enum Type {ATTACK, SKILL, POWER, STATUS, NIGHTMARE}
 enum Rarity {BASIC, COMMON, RARE, LEGEND}
 enum Target {SELF, SINGLE_ENEMY, ALL_ENEMIES, EVERYONE}
 
