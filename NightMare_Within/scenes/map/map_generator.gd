@@ -91,7 +91,7 @@ func _get_random_starting_points() -> Array[int]:
 		y_coordinates = []
 
 		for i in PATHS:
-			var starting_point := randi_range(0, MAP_WIDTH - 1)
+			var starting_point := RNG.instance.randi_range(0, MAP_WIDTH - 1)
 			if not y_coordinates.has(starting_point):
 				unique_points += 1
 			
@@ -243,7 +243,7 @@ func _room_has_parent_of_type(room: Room, type: Room.Type) -> bool:
 
 
 func _get_random_room_type_by_weight() -> Room.Type:
-	var roll := randf_range(0.0, random_room_type_total_weight)
+	var roll := RNG.instance.randf_range(0.0, random_room_type_total_weight)
 	
 	for type: Room.Type in random_room_type_weights:
 		if random_room_type_weights[type] > roll:

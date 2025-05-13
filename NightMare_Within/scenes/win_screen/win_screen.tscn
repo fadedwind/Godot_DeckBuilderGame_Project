@@ -1,0 +1,80 @@
+[gd_scene load_steps=8 format=3 uid="uid://ci13il6jy1bby"]
+
+[ext_resource type="Script" path="res://scenes/win_screen/win_screen.gd" id="1_6f5hf"]
+[ext_resource type="FontFile" uid="uid://bxwokrik8ko0v" path="res://art/fonts/华文楷体.ttf" id="3_nsgfd"]
+[ext_resource type="Theme" uid="uid://b2mrso0snjhyu" path="res://main_theme.tres" id="4_nll7s"]
+[ext_resource type="Texture2D" uid="uid://xwrx1jax8e5s" path="res://characters/Ranger/Ranger.png" id="5_xgppf"]
+
+[sub_resource type="Gradient" id="Gradient_oapow"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_umfp5"]
+gradient = SubResource("Gradient_oapow")
+width = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_kkqk1"]
+font = ExtResource("3_nsgfd")
+font_size = 100
+font_color = Color(0.413599, 0.649687, 0.943202, 1)
+
+[node name="WinScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6f5hf")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_umfp5")
+
+[node name="CharacterPortrait" type="TextureRect" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(800, 800)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 64.0
+offset_top = -1113.0
+offset_right = 894.0
+offset_bottom = -59.0
+grow_vertical = 0
+texture = ExtResource("5_xgppf")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -194.0
+offset_top = 603.0
+offset_right = 806.0
+offset_bottom = 1161.0
+grow_horizontal = 2
+theme_override_constants/separation = 50
+
+[node name="Message" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "   胜利！"
+label_settings = SubResource("LabelSettings_kkqk1")
+horizontal_alignment = 1
+
+[node name="MainMenuButton" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("4_nll7s")
+text = "返回主菜单"
+
+[connection signal="pressed" from="VBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]

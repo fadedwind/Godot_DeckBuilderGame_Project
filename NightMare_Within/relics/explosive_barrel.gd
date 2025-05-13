@@ -1,6 +1,6 @@
 extends Relic
 
-@export var damage := 2
+@export var damage := 3
 
 
 func activate_relic(owner: RelicUI) -> void:

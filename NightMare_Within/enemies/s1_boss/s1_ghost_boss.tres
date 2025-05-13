@@ -1,7 +1,11 @@
-[gd_resource type="Resource" script_class="EnemyStats" load_steps=2 format=3 uid="uid://db7ek51b3bi1t"]
+[gd_resource type="Resource" script_class="EnemyStats" load_steps=4 format=3 uid="uid://db7ek51b3bi1t"]
 
 [ext_resource type="Script" path="res://custom_resources/enemy_stats.gd" id="1_bcx7l"]
+[ext_resource type="Texture2D" uid="uid://d3py3y2r8haw3" path="res://art/enemy/boss/ghost.png" id="1_h3avi"]
+[ext_resource type="PackedScene" uid="uid://betsjnbw3v51v" path="res://enemies/s1_boss/s1_ghost_boss_ai.tscn" id="1_incoi"]
 
 [resource]
 script = ExtResource("1_bcx7l")
-max_health = 160
+ai = ExtResource("1_incoi")
+max_health = 120
+art = ExtResource("1_h3avi")

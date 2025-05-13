@@ -2,12 +2,11 @@
 
 [ext_resource type="Script" path="res://scenes/restsite/restsite.gd" id="1_dnaq6"]
 [ext_resource type="Texture2D" uid="uid://bbj8ntjkj71hd" path="res://art/background/restsite1.png" id="2_8ychj"]
+[ext_resource type="Theme" uid="uid://b2mrso0snjhyu" path="res://main_theme.tres" id="3_wop2l"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_wkbiq"]
 font_size = 50
 font_color = Color(0.647367, 0.647215, 1, 1)
-
-[sub_resource type="Theme" id="Theme_jav32"]
 
 [node name="restsite" type="Control"]
 layout_mode = 3
@@ -51,9 +50,10 @@ label_settings = SubResource("LabelSettings_wkbiq")
 horizontal_alignment = 1
 
 [node name="RestButton" type="Button" parent="UILayer/UI"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
-theme = SubResource("Theme_jav32")
+theme = ExtResource("3_wop2l")
 text = "睡觉"
 
 [node name="Description" type="Label" parent="UILayer/UI"]
@@ -66,6 +66,7 @@ horizontal_alignment = 1
 [node name="UpgradeButton2" type="Button" parent="UILayer/UI"]
 layout_mode = 2
 size_flags_horizontal = 4
+theme = ExtResource("3_wop2l")
 text = "升级"
 
 [node name="Description2" type="Label" parent="UILayer/UI"]

@@ -1,11 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://dl4n2fhpxrcer"]
+[gd_scene load_steps=14 format=3 uid="uid://dl4n2fhpxrcer"]
 
 [ext_resource type="Script" path="res://scenes/shop/shop.gd" id="1_xdntp"]
+[ext_resource type="Script" path="res://custom_resources/relic.gd" id="2_8sr7w"]
 [ext_resource type="Texture2D" uid="uid://dl5jnttjvbmsc" path="res://art/background/store.png" id="2_k8cet"]
 [ext_resource type="Theme" uid="uid://b2mrso0snjhyu" path="res://main_theme.tres" id="3_465ru"]
 [ext_resource type="PackedScene" uid="uid://db4keusmyqj2i" path="res://scenes/shop/shop_card.tscn" id="4_ckimn"]
 [ext_resource type="PackedScene" uid="uid://b6e1yihjxu2d2" path="res://scenes/ui/card_tooltip_popup.tscn" id="5_2imbt"]
 [ext_resource type="PackedScene" uid="uid://bhnsv666c1dwi" path="res://scenes/shop/shop_relic.tscn" id="5_lwy31"]
+[ext_resource type="Resource" uid="uid://n0yner6sditl" path="res://relics/coupons.tres" id="5_vgxf5"]
 [ext_resource type="Resource" uid="uid://mtaq4qw2k4j1" path="res://relics/explosive_barrel.tres" id="6_r6aav"]
 [ext_resource type="Resource" uid="uid://cicgu78vvnoas" path="res://relics/mana_potion.tres" id="7_mrilf"]
 [ext_resource type="Resource" uid="uid://bsjc541gdu08p" path="res://relics/reinforced_armor.tres" id="8_y7wrh"]
@@ -20,6 +22,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xdntp")
+shop_relics = Array[ExtResource("2_8sr7w")]([ExtResource("8_y7wrh"), ExtResource("7_mrilf"), ExtResource("5_vgxf5"), ExtResource("6_r6aav")])
 
 [node name="backgroundLayer" type="CanvasLayer" parent="."]
 layer = 0
@@ -40,10 +43,10 @@ custom_minimum_size = Vector2(250, 100)
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -332.0
-offset_top = 58.0
-offset_right = -82.0
-offset_bottom = 158.0
+offset_left = -333.0
+offset_top = 535.0
+offset_right = -83.0
+offset_bottom = 635.0
 grow_horizontal = 0
 theme = ExtResource("3_465ru")
 text = "离开商店"
@@ -108,9 +111,6 @@ relic = ExtResource("7_mrilf")
 [node name="ShopRelic4" parent="UILayer/ShopContent/Relics" instance=ExtResource("5_lwy31")]
 layout_mode = 2
 relic = ExtResource("8_y7wrh")
-
-[node name="ShopRelic5" parent="UILayer/ShopContent/Relics" instance=ExtResource("5_lwy31")]
-layout_mode = 2
 
 [node name="CardTooltipPopup" parent="UILayer" instance=ExtResource("5_2imbt")]
 unique_name_in_owner = true

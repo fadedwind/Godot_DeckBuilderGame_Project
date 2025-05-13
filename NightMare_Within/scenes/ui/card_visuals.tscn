@@ -8,9 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://bfvi02kojsa00" path="res://art/ui/intent/attack1-5.png" id="4_teyov"]
 [ext_resource type="Texture2D" uid="uid://cqqirgawswiy" path="res://art/cards/rarity1.png" id="5_7kymr"]
 
-
-
-
 [node name="CardVisuals" type="Control"]
 custom_minimum_size = Vector2(253, 394)
 layout_mode = 3
@@ -69,6 +66,8 @@ offset_right = -48.0
 offset_bottom = 204.782
 grow_horizontal = 0
 texture = ExtResource("4_teyov")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Description" type="Label" parent="."]
 custom_minimum_size = Vector2(120, 70)

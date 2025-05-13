@@ -5,11 +5,11 @@
 
 [resource]
 script = ExtResource("1_n8ued")
-damage = 2
-relic_name = "炸药桶"
+damage = 3
+relic_name = "不稳定爆桶"
 id = "002"
 type = 0
 character_type = 0
 starting_relic = false
 icon = ExtResource("1_svt57")
-tooltip = "[color=\"ffdf00\"]爆桶[/color] 你的回合开始时对所有敌人造成2点伤害。"
+tooltip = "[color=\"ffdf00\"]不稳定爆桶[/color] 你的回合开始时，对所有敌人造成3点伤害。"

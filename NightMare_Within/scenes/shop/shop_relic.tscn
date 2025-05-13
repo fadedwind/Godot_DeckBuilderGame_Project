@@ -10,11 +10,11 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_kf4j5")
 
-[node name="CardContainer" type="CenterContainer" parent="."]
+[node name="RelicContainer" type="CenterContainer" parent="."]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="RelicUI" parent="CardContainer" instance=ExtResource("2_oigig")]
+[node name="RelicUI" parent="RelicContainer" instance=ExtResource("2_oigig")]
 layout_mode = 2
 
 [node name="Price" type="HBoxContainer" parent="."]

@@ -32,24 +32,24 @@ position = Vector2(15, 103.235)
 shape = SubResource("RectangleShape2D_whkqg")
 
 [node name="StatsUI" parent="." instance=ExtResource("2_f8364")]
-offset_left = -444.0
-offset_top = -236.66
-offset_right = 456.0
-offset_bottom = -36.6599
+offset_left = -436.0
+offset_top = -405.0
+offset_right = 464.0
+offset_bottom = -205.0
 metadata/_edit_use_anchors_ = true
 
 [node name="IntentUI" parent="." instance=ExtResource("4_4d67b")]
-offset_left = -165.0
-offset_top = -66.6599
-offset_right = -65.0
-offset_bottom = 13.3401
+offset_left = -224.0
+offset_top = -233.0
+offset_right = -124.0
+offset_bottom = -153.0
 metadata/_edit_use_anchors_ = true
 
 [node name="StatusHandler" parent="." node_paths=PackedStringArray("status_owner") instance=ExtResource("5_2081s")]
-offset_left = -187.0
-offset_top = 254.0
-offset_right = 213.0
-offset_bottom = 454.0
+offset_left = 52.0
+offset_top = -272.0
+offset_right = 452.0
+offset_bottom = -72.0
 status_owner = NodePath("..")
 
 [node name="ModifierHandler" parent="." instance=ExtResource("6_b55d3")]

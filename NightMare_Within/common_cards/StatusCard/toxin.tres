@@ -6,12 +6,12 @@
 [resource]
 script = ExtResource("1_3ugpa")
 id = 800
-Cardname = ""
+Cardname = "粘液"
 type = 3
 rarity = 1
 target = 0
 cost = 1
-description = ""
+description = "消耗。"
 exhausts = true
 icon = ExtResource("1_emvqv")
 tooltip_text = "消耗。"

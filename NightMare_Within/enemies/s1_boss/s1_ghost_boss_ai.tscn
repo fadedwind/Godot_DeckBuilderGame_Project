@@ -38,10 +38,12 @@ sound = ExtResource("5_uhdny")
 script = ExtResource("6_ppy33")
 intent = SubResource("Resource_t8n5t")
 sound = ExtResource("8_bfxn0")
+type = 1
 chance_weight = 6.5
 
 [node name="BlockAction" type="Node" parent="."]
 script = ExtResource("9_kivpt")
 intent = SubResource("Resource_4n2s0")
 sound = ExtResource("5_uhdny")
+type = 1
 chance_weight = 3.5
