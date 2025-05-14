@@ -1,13 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://bbgm6cfccalix"]
+[gd_scene load_steps=6 format=3 uid="uid://bbgm6cfccalix"]
 
 [ext_resource type="Script" path="res://scenes/ui/health_ui.gd" id="1_lcye1"]
 [ext_resource type="Texture2D" uid="uid://d0edy7thj8ce6" path="res://art/ui/heart.png" id="1_r36kb"]
 [ext_resource type="Theme" uid="uid://b2mrso0snjhyu" path="res://main_theme.tres" id="2_2dlrj"]
+[ext_resource type="Texture2D" uid="uid://byn4vv3fkaya7" path="res://art/ui/healthbarUnder.png" id="4_d2wk8"]
+[ext_resource type="Texture2D" uid="uid://3lhr1d43201n" path="res://art/ui/healthbarProgress.png" id="5_lfr7m"]
 
 [node name="HealthUI" type="HBoxContainer"]
 offset_left = -1.0
 offset_top = 5.0
-offset_right = 62.0
+offset_right = 299.0
 offset_bottom = 37.0
 theme_override_constants/separation = 0
 script = ExtResource("1_lcye1")
@@ -34,3 +36,9 @@ theme = ExtResource("2_2dlrj")
 text = "/999"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="HealthBar" type="TextureProgressBar" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+texture_under = ExtResource("4_d2wk8")
+texture_progress = ExtResource("5_lfr7m")

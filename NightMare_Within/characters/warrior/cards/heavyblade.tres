@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://dtbq3svleftyw"]
+
+[ext_resource type="Texture2D" uid="uid://dojlh80rte165" path="res://art/ui/intent/attack21-25.png" id="1_3i4iu"]
+[ext_resource type="Script" path="res://characters/Warrior/cards/heavyblade.gd" id="2_p4bgv"]
+[ext_resource type="AudioStream" uid="uid://de2ryat1pxq6" path="res://art/audio/enemy_attack.ogg" id="3_utehp"]
+
+[resource]
+script = ExtResource("2_p4bgv")
+id = 5
+Cardname = "重劈"
+type = 0
+rarity = 1
+target = 1
+cost = 3
+description = "造成30点伤害。"
+exhausts = false
+icon = ExtResource("1_3i4iu")
+tooltip_text = "[center]造成[color=\"ff0000\"]%s[/color]点伤害.[/center]"
+sound = ExtResource("3_utehp")

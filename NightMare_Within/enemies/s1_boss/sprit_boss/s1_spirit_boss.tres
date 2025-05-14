@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EnemyStats" load_steps=4 format=3 uid="uid://cx7n1ypr4qnt2"]
+
+[ext_resource type="PackedScene" uid="uid://cfecqcpvp31jg" path="res://enemies/s1_boss/sprit_boss/s1_spirit_boss_ai.tscn" id="1_vtgra"]
+[ext_resource type="Texture2D" uid="uid://edthjr8kd1bv" path="res://art/enemy/MistSpirit.png" id="2_eggqh"]
+[ext_resource type="Script" path="res://custom_resources/enemy_stats.gd" id="3_jioi6"]
+
+[resource]
+script = ExtResource("3_jioi6")
+ai = ExtResource("1_vtgra")
+max_health = 130
+art = ExtResource("2_eggqh")

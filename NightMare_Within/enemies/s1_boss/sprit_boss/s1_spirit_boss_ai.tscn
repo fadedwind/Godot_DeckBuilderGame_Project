@@ -1,0 +1,48 @@
+[gd_scene load_steps=14 format=3 uid="uid://cfecqcpvp31jg"]
+
+[ext_resource type="Script" path="res://scenes/enemy/enemy_action_picker.gd" id="1_mf8ds"]
+[ext_resource type="Script" path="res://enemies/s1_boss/sprit_boss/spirit_strength_buff_action.gd" id="2_msamu"]
+[ext_resource type="Texture2D" uid="uid://uo8q85rmhukc" path="res://icon.png" id="3_752kw"]
+[ext_resource type="Script" path="res://enemies/s1_boss/sprit_boss/spirit_attack_action.gd" id="3_fby1d"]
+[ext_resource type="Script" path="res://enemies/s1_boss/sprit_boss/spirit_block_action.gd" id="4_pavjj"]
+[ext_resource type="Script" path="res://custom_resources/intent.gd" id="4_y0g7w"]
+[ext_resource type="AudioStream" uid="uid://k8m4o3hlwm7l" path="res://art/audio/enemy_block.ogg" id="5_fhpvj"]
+[ext_resource type="AudioStream" uid="uid://d3foovj7p0a6e" path="res://art/audio/STS_SFX_EnemyAtk_Knife_v1.ogg" id="7_suwku"]
+[ext_resource type="AudioStream" uid="uid://de2ryat1pxq6" path="res://art/audio/enemy_attack.ogg" id="8_0h00c"]
+[ext_resource type="Texture2D" uid="uid://oe7v35ii8vrs" path="res://art/ui/intent/block.png" id="10_gcgon"]
+
+[sub_resource type="Resource" id="Resource_v2uxn"]
+script = ExtResource("4_y0g7w")
+base_text = ""
+icon = ExtResource("3_752kw")
+
+[sub_resource type="Resource" id="Resource_iln7m"]
+script = ExtResource("4_y0g7w")
+base_text = ""
+
+[sub_resource type="Resource" id="Resource_1ywrg"]
+script = ExtResource("4_y0g7w")
+base_text = ""
+icon = ExtResource("10_gcgon")
+
+[node name="SpiritAI" type="Node"]
+script = ExtResource("1_mf8ds")
+
+[node name="StrengthBuffAction" type="Node" parent="."]
+script = ExtResource("2_msamu")
+intent = SubResource("Resource_v2uxn")
+sound = ExtResource("8_0h00c")
+
+[node name="AttackAction" type="Node" parent="."]
+script = ExtResource("3_fby1d")
+intent = SubResource("Resource_iln7m")
+sound = ExtResource("7_suwku")
+type = 1
+chance_weight = 7.0
+
+[node name="BlockAction" type="Node" parent="."]
+script = ExtResource("4_pavjj")
+intent = SubResource("Resource_1ywrg")
+sound = ExtResource("5_fhpvj")
+type = 1
+chance_weight = 3.0

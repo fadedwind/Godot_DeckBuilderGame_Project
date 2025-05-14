@@ -1,11 +1,12 @@
-[gd_resource type="Resource" script_class="CardPile" load_steps=6 format=3 uid="uid://cdu8ne3yq3i0"]
+[gd_resource type="Resource" script_class="CardPile" load_steps=7 format=3 uid="uid://cdu8ne3yq3i0"]
 
 [ext_resource type="Script" path="res://custom_resources/card.gd" id="1_0gn6h"]
 [ext_resource type="Resource" uid="uid://bafwh55iag38v" path="res://characters/Warrior/cards/warrior_slash.tres" id="2_bvpsu"]
+[ext_resource type="Resource" uid="uid://dtbq3svleftyw" path="res://characters/Warrior/cards/heavyblade.tres" id="3_51yqu"]
 [ext_resource type="Resource" uid="uid://c1vpojhc12sh6" path="res://characters/Warrior/cards/bash.tres" id="3_q2vqc"]
 [ext_resource type="Resource" uid="uid://x8ymfle6vrq8" path="res://characters/Warrior/cards/strength_form.tres" id="4_tidu4"]
 [ext_resource type="Script" path="res://custom_resources/card_pile.gd" id="5_f3w41"]
 
 [resource]
 script = ExtResource("5_f3w41")
-cards = Array[ExtResource("1_0gn6h")]([ExtResource("2_bvpsu"), ExtResource("2_bvpsu"), ExtResource("2_bvpsu"), ExtResource("3_q2vqc"), ExtResource("3_q2vqc"), ExtResource("3_q2vqc"), ExtResource("4_tidu4"), ExtResource("4_tidu4"), ExtResource("4_tidu4"), ExtResource("3_q2vqc"), ExtResource("4_tidu4"), ExtResource("2_bvpsu")])
+cards = Array[ExtResource("1_0gn6h")]([ExtResource("2_bvpsu"), ExtResource("2_bvpsu"), ExtResource("3_51yqu"), ExtResource("3_q2vqc"), ExtResource("3_q2vqc"), ExtResource("3_51yqu"), ExtResource("4_tidu4"), ExtResource("4_tidu4"), ExtResource("3_51yqu"), ExtResource("3_q2vqc"), ExtResource("4_tidu4"), ExtResource("2_bvpsu")])
