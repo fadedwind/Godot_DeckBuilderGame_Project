@@ -46,7 +46,7 @@ The GitHub repository shows the final lines of code (LOC) close to 15,000. The f
 
 - **Shop View**
 
-![alt text]NightMare_Within/Intro/image-3.png)
+![alt text](NightMare_Within/Intro/image-3.png)
 
 ---
 
