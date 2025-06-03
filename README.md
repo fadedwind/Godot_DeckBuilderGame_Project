@@ -19,7 +19,7 @@ The GitHub repository shows the final lines of code (LOC) close to 15,000. The f
 
 ### 2.1 Basic Battle Logic diagram 
 
-![alt text]((Intro/image0.png)
+![alt text](NightMare_Within/Intro/image0.png)
 
 ### 2.2 Card State Machine
 
