@@ -1,4 +1,4 @@
-# NightMare Within
+# GAME NAME:NightMare Within
 
 ## 0. About the Work
 
