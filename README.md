@@ -68,7 +68,6 @@ The GitHub repository shows the final lines of code (LOC) close to 15,000. The f
 ## 6. Reflections
 
 Maybe we are not good enough, but we enjoyed working on this project.
-
 This time, we adopted an equal and democratic team management approach among three people. After this project, we think that a leader-based decision-making and command-giving approach might be more efficient.
 
 ---
